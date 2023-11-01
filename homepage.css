@@ -1,0 +1,46 @@
+header {
+  background-color: white;
+}
+p::first-letter {
+  font-size: 20px;
+}
+.bolum1 {
+  background: url(img/homepageslayt1.jpg);
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center right;
+  background-size: auto;
+  height: 450px;
+  width: 75%;
+}
+.row {
+  padding: 40px;
+  text-align: center;
+}
+.column {
+  display: inline-block;
+  vertical-align: text-top;
+  width: calc(25% - 4px);
+  height: 300px;
+}
+.row h2 {
+  font-size: xx-large;
+}
+/* font belirleme */
+.bolum2 {
+  font-family: "Times New Roman", Times, serif;
+}
+/* uzerine geline goster */
+.row :hover .imgyazar {
+  display: block;
+}
+/* normalde resim gozukmesin */
+.imgyazar {
+  display: none;
+}
+.imgyazar {
+  padding: 0px 110px;
+  width: 120px;
+  height: 120px;
+}

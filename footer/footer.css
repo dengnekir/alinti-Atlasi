@@ -1,0 +1,138 @@
+body {
+  margin: 2px;
+  padding: 2px;
+}
+#yonlendirme {
+  text-align: left;
+  padding-top: 20px;
+}
+#kayitolma {
+  padding-top: 20px;
+}
+/* linklere genel tasarımı verme */
+header a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 21px;
+}
+/* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar.linkler arası boşluk bıraktırır */
+.yonlendirme-li {
+  padding: 15px;
+  display: inline-block;
+}
+/* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar. linkler arası boşluk bıraktırır */
+.kayitolma-li {
+  padding-left: 20px;
+  display: inline-block;
+}
+/* ziyaret edilmeden önceki kink rengi */
+header a:link {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* link ziyaret edildikten sonraki renk */
+header a:visited {
+  color: rgba(9, 6, 6, 0.5);
+}
+/* linkin uzerine gittikten sonra arkaplan verir */
+.yonlendirme-li a:hover {
+  color: black;
+  background-color: rgba(223, 222, 222, 0.578);
+}
+/* uzerine basınca oluşan renk */
+a:active {
+  color: royalblue;
+}
+
+/* kayıt linkine şekil verme */
+.kayitolma-li a {
+  background-color: rgba(223, 222, 222, 0.578);
+  padding: 0px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(223, 222, 222, 0.578);
+}
+/* üzerine gelinceki renk */
+.kayitolma-li a:hover {
+  color: #fff;
+  background-color: rgba(22, 16, 16, 0.578);
+}
+
+/* footer logo */
+.img-logo2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0;
+}
+.footer {
+  display: inline-block;
+  width: 33%;
+  height: 300px;
+
+  vertical-align: top;
+}
+footer a {
+  text-decoration: none;
+}
+.footer-genel {
+  background-color: rgba(223, 222, 222, 0.578);
+}
+#logo2 {
+  text-align: center left;
+  padding: 0;
+  list-style-type: none;
+}
+#sss-ul {
+  list-style-type: none;
+}
+footer a:link {
+  color: rgb(31, 29, 29);
+}
+footer a:visited {
+  color: rgb(69, 66, 66);
+}
+.takipet-li a:hover {
+  color: black;
+  background-color: rgba(223, 222, 222, 0.578);
+}
+.sss-li a:hover {
+  color: black;
+  background-color: rgba(223, 222, 222, 0.578);
+}
+/* uzerine basınca oluşan renk */
+footer a:active {
+  color: black;
+}
+.sss-li {
+  display: block;
+  padding: 9px;
+  text-decoration: none;
+
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.h3-sss {
+  text-align: center left;
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: x-large;
+}
+.takipet-li {
+  display: inline-block;
+  padding: 10px;
+}
+#takipet-li a:hover {
+  color: black;
+  background-color: rgba(223, 222, 222, 0.578);
+}
+.iletisim-footer {
+  display: inline-block;
+  padding-right: 20px;
+
+  list-style-type: none;
+}
+.iletisim {
+  text-align: left;
+  margin: 25px 9px;
+  padding: 0;
+}
