@@ -1,46 +1,145 @@
-header {
-  background-color: white;
+body {
+  margin: 0;
 }
+.div-ana {
+  margin-top: 15vh;
+  width: 100%;
+}
+
 p::first-letter {
-  font-size: 20px;
+  font-size: 25px;
 }
+/* bolum 1 */
 .bolum1 {
-  background: url(img/homepageslayt1.jpg);
+  background-image: url(img/homepageslayt1.jpg);
+
+  background-attachment: fixed;
+  background-position: center;
   border-radius: 2px;
   margin-left: auto;
   margin-right: auto;
-  background-position: center right;
-  background-size: auto;
-  height: 450px;
-  width: 75%;
+  /* contain dene */
+  background-size: cover;
+  height: 66vh;
 }
+/*  bolum 2 */
+/* font belirleme */
+.bolum2 {
+  font-family: "Times New Roman", Times, serif;
+  /* lineer renk değişimi  */
+  background-image: linear-gradient(#ffffff, rgb(128, 128, 255));
+}
+
 .row {
   padding: 40px;
   text-align: center;
+  font-family: "Edu TAS Beginner", cursive;
 }
+
 .column {
   display: inline-block;
   vertical-align: text-top;
   width: calc(25% - 4px);
-  height: 300px;
+  height: 50vh;
+}
+.column h3 {
+  box-shadow: rgba(103, 99, 99, 0.56) 5px 10px 55px 0px;
+  background-color: rgb(179, 179, 255);
 }
 .row h2 {
   font-size: xx-large;
 }
-/* font belirleme */
-.bolum2 {
-  font-family: "Times New Roman", Times, serif;
-}
+
 /* uzerine geline goster */
 .row :hover .imgyazar {
   display: block;
 }
-/* normalde resim gozukmesin */
+/* normalde resim gozukmesin bolum 2*/
+
 .imgyazar {
   display: none;
-}
-.imgyazar {
   padding: 0px 110px;
-  width: 120px;
+  width: 140px;
   height: 120px;
 }
+/* bolum 3 */
+.dostoyewski {
+  width: auto;
+  display: flex;
+  background-image: linear-gradient(rgb(128, 128, 255), #009999);
+  height: 90vh;
+}
+.bolum3-p {
+  font-family: "Edu TAS Beginner", cursive;
+  padding: bottom left;
+  text-align: center;
+  padding: 8% 0% 0% 10%;
+  font-weight: 600;
+  font-size: 2.5vh;
+}
+.bolum3-img {
+  /* sekil verme */
+  clip-path: circle(50% at 50% 50%);
+}
+.row-bolum3 {
+  background-image: linear-gradient(#009999, #33ffd6);
+  padding: 40px;
+  text-align: center;
+}
+.column-bolum3 {
+  font-family: "Edu TAS Beginner", cursive;
+  display: inline-block;
+  vertical-align: text-top;
+  width: calc(50% - 4px);
+  height: 75vh;
+}
+.imgyazar-b3 {
+  width: 40vh;
+  height: 40vh;
+}
+.imgyazar-b3:hover {
+  transform: translateY(-10px);
+}
+/* bolum 4 */
+.bolum4 {
+  background-image: linear-gradient(#33ffd6, #fff);
+  height: 70vh;
+}
+.bolum4 h3 {
+  box-shadow: rgba(255, 24, 24, 0.56) 5px 10px 55px 0px;
+  background-color: #118d74;
+}
+/* bolum 5 */
+.bolum5 {
+  background-image: url(img/bolum5.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* contain dene */
+  background-size: cover;
+  height: 96vh;
+}
+.div-bolum5 {
+  background-image: linear-gradient(#33ffd6, #b3ffff);
+}
+/* bolum 6 */
+.bolum6 {
+  font-family: "Times New Roman", Times, serif;
+  background-image: linear-gradient(#fff, rgba(255, 255, 255, 0.578));
+}
+.bolum6 h1 {
+  padding-top: 10vh;
+  text-align: center;
+  font-size: xx-large;
+}
+.bolum6-p {
+  font-family: "Edu TAS Beginner", cursive;
+  text-align: center;
+  padding: 0px 5rem;
+  font-weight: 500;
+  font-size: large;
+}
+.bolum6 h3 {
+  background-color: #fff;
+}
+/* border renk bolum6 komple */

@@ -10,6 +10,11 @@ body {
   padding-top: 20px;
 }
 /* linklere genel tasarımı verme */
+header {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+}
 header a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
@@ -36,8 +41,10 @@ header a:visited {
 }
 /* linkin uzerine gittikten sonra arkaplan verir */
 .yonlendirme-li a:hover {
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
   color: black;
   background-color: rgba(223, 222, 222, 0.578);
+  transition: 0.2s;
 }
 /* uzerine basınca oluşan renk */
 a:active {
@@ -53,8 +60,10 @@ a:active {
 }
 /* üzerine gelinceki renk */
 .kayitolma-li a:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   color: #fff;
   background-color: rgba(22, 16, 16, 0.578);
+  transition: 0.8s;
 }
 
 /* footer logo */
@@ -87,11 +96,16 @@ footer a {
 footer a:link {
   color: rgb(31, 29, 29);
 }
+footer a:hover {
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  transition: 0.2s;
+}
 footer a:visited {
   color: rgb(69, 66, 66);
 }
 .takipet-li a:hover {
   color: black;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   background-color: rgba(223, 222, 222, 0.578);
 }
 .sss-li a:hover {
@@ -121,10 +135,7 @@ footer a:active {
   display: inline-block;
   padding: 10px;
 }
-#takipet-li a:hover {
-  color: black;
-  background-color: rgba(223, 222, 222, 0.578);
-}
+
 .iletisim-footer {
   display: inline-block;
   padding-right: 20px;
