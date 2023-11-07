@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="img/alıntıatlası.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../img/alıntıatlası.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="footer.css" />
+    <link
+      rel="shortcut icon"
+      href="../img/alıntıatlası.png"
+      type="image/x-icon"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gizlilik Politikası</title>
@@ -20,27 +29,60 @@
     />
     <!-- css kodları -->
     <style>
+      body {
+        font-size: 62.5%;
+        background-image: linear-gradient(#fff, #bfbfbf);
+      }
       .h3-p {
         font-family: "Edu TAS Beginner", cursive;
-        font-size: 30px;
+        font-size: 3rem;
         text-align: left;
-        margin: 30px 100px;
+        margin: 3rem 1rem;
       }
       p {
-        margin: 20px 100px;
+        margin: 2rem 0;
         text-align: left;
-        font-size: 20px;
+        font-size: 2rem;
         font-family: "Edu TAS Beginner", cursive;
       }
       .gizlilik-politikasi {
-        padding: 50px 200px;
+        padding: 5rem 0rem;
       }
       /* ilk harfi buyuk yazma */
       p::first-letter {
-        font-size: 25px;
+        font-size: 2.5rem;
       }
+
       h1 {
         text-align: center;
+      }
+      @media (max-width: 768px) {
+        p {
+          font-size: 1.5rem;
+        }
+        .main-ana {
+          margin: 12rem 15rem;
+        }
+        p::first-letter {
+          font-size: 2rem;
+        }
+        #h1 {
+          font-size: 3rem;
+        }
+      }
+      @media (min-width: 769px) and (max-width: 1500px) {
+        .main-ana {
+          margin: 15rem 25rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+        p::first-letter {
+          font-size: 4.5rem;
+        }
+        #h1 {
+          font-size: 3rem;
+        }
       }
     </style>
   </head>
@@ -70,12 +112,10 @@
               <!-- yonlendirilme yerleri -->
               <ul class="yonlendirme-ul">
                 <li class="yonlendirme-li">
-                  <a class="kesfet" href="../header/kesfet.html">Keşfet</a>
+                  <a class="kesfet" href="../homepage.html #bolum2">Keşfet</a>
                 </li>
                 <li class="yonlendirme-li">
-                  <a class="hakkimizda" href="../footer/hakkimizda.html"
-                    >Hakkımızda</a
-                  >
+                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
                 </li>
                 <li class="yonlendirme-li">
                   <a class="alintivesoz" href="../header/alintilarVeSozler.html"
@@ -170,7 +210,7 @@
       </p>
     </main>
 
-    <footer>
+    <footer id="footer">
       <div class="footer-genel">
         <div class="footer">
           <ul>

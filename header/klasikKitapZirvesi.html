@@ -1,10 +1,818 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="img/alıntıatlası.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../img/alıntıatlası.png"
+      type="image/x-icon"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Klasik Kitap Zirvesi</title>
+    <link rel="stylesheet" href="header.css" />
+    <!-- icon kütüphanesi -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      #ikon {
+        font-size: 1.4rem;
+      }
+      #input {
+        border-radius: 4rem;
+        width: 50%;
+        padding: 1rem 8rem;
+      }
+      .input {
+        text-align: center;
+        margin-left: 14rem;
+      }
+      #input:focus {
+        color: white;
+        background-color: #dfd7d7;
+      }
+
+      /* secenekler kısmı */
+      .nav-ana {
+        margin: 8rem 0;
+        width: 20rem;
+        height: 100%;
+        background-image: linear-gradient(#fff, #9e9797);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Diğer içerikleri kapatma olayı */
+        overflow-y: auto; /* kaydırma cubugu */
+      }
+
+      /* Footer */
+      #footer {
+        margin-left: 200px;
+        /* menü çubuğu etki etmesin diye */
+      }
+
+      .nav-ana ul {
+        list-style: none;
+        padding: 1.3rem;
+        margin-top: 0rem;
+      }
+      /* link arası bosluk */
+      .nav-ana ul li {
+        padding: 10px 0;
+      }
+      body {
+        font-size: 62.5%;
+      }
+      section {
+        margin-top: 20vh;
+        background-image: linear-gradient(#fff, #d9d9d9);
+      }
+
+      .ana-link {
+        list-style: none;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.8rem;
+      }
+      .ul-link a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        list-style: none;
+      }
+      ul {
+        margin-top: 3rem;
+        list-style: none;
+      }
+      /* ziyaret edilmeden önceki kink rengi */
+      a:link {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      /* link ziyaret edildikten sonraki renk */
+      a:visited {
+        color: rgba(9, 6, 6, 0.5);
+      }
+      /* linkin uzerine gittikten sonra arkaplan verir */
+      a:hover {
+        color: black;
+      }
+      /* uzerine basınca oluşan renk */
+      a:active {
+        color: rgb(119, 130, 160);
+      }
+      .column {
+        display: flex;
+        vertical-align: bottom;
+        margin: 5rem 15rem 0 0;
+      }
+      #img-kitap {
+        padding-left: 35rem;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+      }
+      .img-kitapp {
+        height: 25vh;
+        width: 15vh;
+      }
+      .kitap-isim {
+        font-size: 3rem;
+        font-family: "Edu TAS Beginner", cursive;
+        font-weight: bold;
+        margin-top: 0;
+        margin-left: 1.7rem;
+      }
+      .kitap-ozet {
+        font-size: 1.2rem;
+        font-family: "Edu TAS Beginner", cursive;
+        font-weight: bold;
+        padding: 0.5rem 4rem;
+      }
+      @media (max-width: 576px) {
+        #ikon {
+          font-size: 1rem;
+        }
+        #input {
+          border-radius: 4rem;
+          padding: 1rem 4rem;
+        }
+        .input {
+          margin-left: 5rem;
+        }
+        .nav-ana {
+          display: none;
+        }
+        #footer {
+          margin-left: 0;
+        }
+        .nav-ana ul {
+          padding: 0rem;
+        }
+        /* link arası bosluk */
+        .nav-ana ul li {
+          padding: 0;
+        }
+        #section {
+          margin-top: 2vh;
+        }
+
+        .ana-link {
+          font-size: 0.4rem;
+        }
+        .ul-link a {
+          font-size: 0.3rem;
+        }
+        ul {
+          margin-top: 1rem;
+        }
+        .column {
+          margin: 2rem 3rem 0 0;
+        }
+        #img-kitap {
+          padding-left: 5rem;
+          padding-top: 4rem;
+          padding-bottom: 2rem;
+        }
+        .kitap-isim {
+          font-size: 2rem;
+          margin-left: 1rem;
+        }
+        .kitap-ozet {
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+      @media (min-width: 577px) and (max-width: 992px) {
+        .nav-ana {
+          display: none;
+        }
+        #footer {
+          margin-left: 1rem;
+        }
+        .nav-ana ul {
+          padding: 1rem;
+        }
+        /* link arası bosluk */
+        .nav-ana ul li {
+          padding: 1rem;
+        }
+        #section {
+          margin-top: 10vh;
+        }
+
+        .ana-link {
+          font-size: 0.8rem;
+        }
+        .ul-link a {
+          font-size: 0.6rem;
+        }
+        ul {
+          margin-top: 1rem;
+        }
+        .column {
+          margin: 3.5rem 8rem 0 0;
+        }
+        #img-kitap {
+          padding-left: 20rem;
+          padding-top: 6rem;
+          padding-bottom: 3rem;
+        }
+        .kitap-isim {
+          font-size: 2.5rem;
+          margin-left: 1.5rem;
+        }
+        .kitap-ozet {
+          font-size: 1.2rem;
+          padding: 0.5rem 3rem;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header class="header" id="header">
+      <table class="table">
+        <tr>
+          <td id="img-logo">
+            <!-- logo ana sayfa -->
+            <a class="img-logo" href="../homepage.html">
+              <img
+                class="img-logo1"
+                src="../img/alıntıatlası.png"
+                alt="Logo"
+                width="90px"
+                ;
+                height="90px"
+                ;
+            /></a>
+          </td>
+          <td>
+            <h1 class="baslik">Alıntı Atlası</h1>
+          </td>
+          <td>
+            <nav id="yonlendirme">
+              <!-- yonlendirilme yerleri -->
+              <ul class="yonlendirme-ul">
+                <li class="yonlendirme-li">
+                  <a class="kesfet" href="../homepage.html #bolum2">Keşfet</a>
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="alintivesoz" href="alintilarVeSozler.html"
+                    >Alıntılar ve Sözler</a
+                  >
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="yazarvesair" href="yazarVeSairler.html"
+                    >Yazarlar ve Şairler</a
+                  >
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="kitapZirvesi" href="klasikKitapZirvesi.html"
+                    >Kitap Zirvesi</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </td>
+          <td>
+            <nav id="kayitolma">
+              <!-- kayıt olma kısmı -->
+              <ul class="kayitolma-ul">
+                <li class="kayitolma-li">
+                  <a href="kayitOl.html">Kayıt Ol</a>
+                </li>
+                <li class="kayitolma-li">
+                  <a href="girisYap.html">Giriş Yap</a>
+                </li>
+              </ul>
+            </nav>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <section>
+      <div class="input">
+        <input id="input" type="text" />
+        <a href="#" id="ikon">
+          <i class="fa-solid fa-magnifying-glass fa-2xl"></i
+        ></a>
+      </div>
+      <main>
+        <nav class="nav-ana">
+          <ul>
+            <li>
+              <a class="ana-link" href="#">Roman</a>
+              <ul class="ul-link">
+                <li><a href="#">Polisiye Romanlar</a></li>
+                <li><a href="#">Çizgi Romanlar</a></li>
+                <li><a href="#">Fantastik Romanlar</a></li>
+                <li><a href="#">Psikolojik Romanlar</a></li>
+                <li><a href="#">Tarihi Romanlar</a></li>
+                <li><a href="#">Romantik Romanlar</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Hikaye</a>
+              <ul class="ul-link">
+                <li><a href="#">Durum Hikayeleri</a></li>
+                <li><a href="#">Gotik Hikayeler</a></li>
+                <li><a href="#">Korku Hikayeleri</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Şiir</a>
+              <ul class="ul-link">
+                <li><a href="#">Lirik Şiirler</a></li>
+                <li><a href="#">Epik Şiirler</a></li>
+                <li><a href="#">Pastorsl Şiirler</a></li>
+                <li><a href="#">Didaktik Şiirler</a></li>
+                <li><a href="#">Satirik Şiirler</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Masal</a>
+              <ul class="ul-link">
+                <li><a href="#">Olağanüstü Masallar</a></li>
+                <li><a href="#">Aşk Masalları Masallar</a></li>
+                <li><a href="#">Hayvan Masallar</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Deneme</a>
+              <ul class="ul-link">
+                <li><a href="#">Siyasi Deneme</a></li>
+                <li><a href="#">Felsefi Deneme</a></li>
+                <li><a href="#">Yazınsal Deneme</a></li>
+                <li><a href="#">Eleştirel Deneme</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Makale</a>
+              <ul class="ul-link">
+                <li><a href="#">Bilimsel Makale</a></li>
+                <li><a href="#">Derleme Makale</a></li>
+                <li><a href="#">Edebi Makale</a></li>
+                <li><a href="#">Gazete Makalesi</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Eleştiri</a>
+              <ul class="ul-link">
+                <li><a href="#">Öznel(İzlenimci) Eleştiri</a></li>
+                <li><a href="#">Tarihi Eleştiri</a></li>
+                <li><a href="#">Sanatçıya Yönelik Eleştiri</a></li>
+                <li><a href="#">Esere Yönelik Eleştiri</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Gezi Yazısı</a>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Fıkra</a>
+            </li>
+            <li>
+              <a class="ana-link" href="#">Biyografi</a>
+              <ul class="ul-link">
+                <li><a href="#">Bilimsel Biyografi</a></li>
+                <li><a href="#">Otobiyografi</a></li>
+                <li><a href="#">Portre</a></li>
+                <li><a href="#">Portre</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </main>
+      <aside>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:128/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F27823_bd015_1544034092.jpg"
+                alt="Sabahattin_Ali"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Kürk Mantolu Madonna</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                Kitabin konusu bankacıyken işine son verilen yazar eski arkadaşı
+                Hamdinin yardımıyla onun yanında işe girer. Oda arkadaşı Raif
+                efendi nötr mizaclı biridir. En şiddetli olaylara bile sükunetle
+                karşılık verir.Hasta yatağında son günlerini yaşayan Raif efendi
+                yazardan tuttuğu günlüğü yakmasını ister. Yazar ancak okuduktan
+                sonra bunu yapacağını söyler ve Kürk mantolu madonna hikayesi
+                başlar. Raif güzel sanatlara merakı olan biridir. Savas yılları
+                babası meydanın boş kalmasından endişe eder ve onu okutmak
+                ister. Almanya'ya gidip sabun yapımının inceliklerini öğrenecek
+                ve Türkiye ye dönüp fabrikanın başına geçecektir. Berlinde bir
+                sergide gördüğü Maria Puderin portresi olan kürk mantolu madonna
+                resmi istemsiz bir şekilde onu kendine çeker. Raif sadece
+                yüreğinin peşinden gider.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:384/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F56586_a6517_1619882264.jpg"
+                alt="Mehmed_Uzun"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Aşk Gibi Aydınlık Ölüm Gibi Karanlık</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                İki çaresiz, yalnız, eksik ve kırgın yürek aynı topraktan
+                olmalarına rağmen yazgılarına yenik düşüp, farklı cephelerde yer
+                alır. Baz devletin derinliklerinde, yalancı bir geçmişle
+                beslenmiş bir komutan, Kevok, üniversiteyi bırakıp sevdiğinin
+                ardı sıra dağları mekan tutan idealist bir genç kız. Ve bununla
+                birlikte akıp giden, bir halkın makus talihi ve gelecek
+                işaretleri. Yazgıları, onları en umulmadık zamanda buluşturup
+                ölüme yolcu eder.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:384/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2FKacirilan-Cocuk_13775_1416657052.png"
+                alt="Robert_Luis_Stevenson"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Kaçırılan Çocuk</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                İskoçyalı bir genç olan David, ailesiyle fakir ama mutlu bir
+                yaşam sürmektedir. Öğretmen olan babası oğlunu iyi, akıllı ve
+                cesur bir delikanlı olarak yetiştirmiştir. Ancak annesi ve
+                babasının genç yaşta ölümü üzerine David tek başına kalır.
+                Babasının isteği üzerine David başka bir kentte yaşayan
+                akrabalarının yanına gider. Ancak kötü bir adam olan amcasının
+                da ondan kurtulmak için planları vardır ve bir kaptana para
+                vererek, delikanlıyı kaçırmasını sağlar. Kendini Amerika
+                kıtasına doğru giden bir gemide bulan David'i bekleyen kader
+                köle olarak satılmaktır. Ancak olaylar beklenmedik şekilde
+                gelişir ve David kendini inanılmaz bir maceranın içinde bulur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:640/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F56586_8nmei_1645528664.jpg"
+                alt="john_Steinbeck"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Fareler ve İnsanlar</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                Fareler ve İnsanlar, birbirine zıt karakterdeki iki mevsimlik
+                tarım işçisinin, zeki George Milton ve onun güçlü kuvvetli ama
+                akli dengesi bozuk yoldaşı Lennie Small’un öyküsünü anlatır.
+                Küçük bir toprak satın alıp insanca bir hayat yaşamanın hayalini
+                kuran bu ikilinin öyküsünde dostluk ve dayanışma duygusu önemli
+                bir yer tutar. Steinbeck insanın insanla ilişkisini anlatmakla
+                kalmaz insanın doğayla ve toplumla kurduğu ilişkileri de konu
+                eder bu destansı romanında. Kitabın ismine ilham veren Robert
+                Burns şiirindeki gibi; “En iyi planları farelerin ve insanların
+                / Sıkça ters gider…"
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:640/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F56586_2218b_1621537273.jpg"
+                alt="Livaneli"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Serenad</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                1930'lu yıllarda İstanbul Üniversitesi'nde hocalık yapmış olan
+                profesörün isteği üzerine, Maya bir gün onu Şile'ye götürür.
+                Böylece, katları yavaş yavaş açılan dokunaklı bir aşk hikâyesine
+                karışmakla kalmaz, dünya tarihine ve kendi ailesine ilişkin
+                birtakım sırları da öğrenir. Serenad, 60 yıldır süren bir aşkı
+                ele alırken, ister herkesin bildiği Yahudi Soykırımı olsun
+                isterse çok az kimsenin bildiği Mavi Alay, bütün siyasi
+                sorunlarda asıl harcananın, gürültüye gidenin hep insan olduğu
+                gerçeğini de göz önüne seriyor. Okurunu sımsıkı kavrayan
+                Serenad'da Zülfü Livaneli'nin romancılığının en temel
+                niteliklerinden biri yine başrolde: İç içe geçmiş, kaynaşmış
+                kişisel ve toplumsal tarihlerin kusursuz Dengesi.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:384/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F39535_O8MHw_1509399789.jpg"
+                alt="Franz_kafka"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Babaya Mektup</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                "Senin etkinden tamamen bağımsız büyümüş olsaydım bile, senin
+                gönlünde yatan insan gibi biri olamayacaktım büyük ihtimalle.
+                Herhalde yine çelimsiz, ürkek, kararsız, huzursuz bir insan
+                olurdum…" Yaşarken bir avuç insan tarafından bilinen Kafka,
+                ölümünden sonra dostu Max Brod'un vasiyetine ihanet edip (!)
+                eserlerini yayınlamasıyla birlikte, özellikle İkinci Dünya
+                Savaşı sonrasında hızla dünya çapında tanınmaya başladı ve
+                yirminci yüzyılın en önemli yazarlarından biri haline geldi,
+                haklı olarak.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:384/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F39535_bgLCh_1508236780.jpg"
+                alt="Fyador_Dostoyevski"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Yeraltından Notlar</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                Dostoyevski'nin "Rus çoğunluğunun hakiki insanı" dediği bir
+                isimsiz kahramanın yalın ve karanlık düşünceleri... Edebiyat
+                tarihinin en ünlü isimsizlerinden Yeraltı Adamı, insanların
+                oradan oraya üşüşen karıncalara dönüştüğü St. Petersburg'un gri
+                kaldırımlarında itilip kakılırken, yaşama isteğini yavaş ama
+                emin adımlarla mutlak bir öç isteğiyle değiş tokuş eder. Yeraltı
+                Adamı'nın bir devlet memuru olarak geçirdiği tekdüze günler,
+                yanında bir türlü rahat hissedemediği arkadaşları ve hayattaki
+                mutlak yalnızlığı, bıkkın bir öfke ve küçük, imkânsız
+                pazarlıklarla gittikçe daha fazla lekelenir, ta ki kendisini bir
+                arada tutan görünmez ipler yavaşça çözülmeye başlayana kadar.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:640/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F39535_8bLqz_1518787110.jpg"
+                alt="ahmed_Arif"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Hasretinden Prangalar Eskittim</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                Hasretinden Prangalar Eskittim, ilk kez 1968 yılında yayımlandı.
+                O tarihten günümüze defalarca baskı yaptı. Birbirini takip eden
+                birkaç kuşak sosyalist ve devrimcinin ellerinde, sözlerinde ve
+                şarkılarındaydı. Birçok kişinin acı tatlı hatıralarında
+                unutulmaz, özel bir yeri oldu. Ahmed Arif şiirleri bizce, hem
+                şairin kendi kuşağının hem de ardından 68-78 kuşaklarının
+                memleket ve halk sevgisini, isyancı ruhunu ve başkaldırı etiğini
+                simgeliyor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:640/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F1577_1463867769.jpg"
+                alt="cengiz_Aytmatov"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Gün Olur Asra Bedel</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                Cengiz Aytmatov'un bütün dünyada geniş yankılar uyandıran bu
+                romanı, yürek paralayan, tüyler ürperten bir haykırıştır. Fakat
+                umutsuz bir çırpınış değil, tutsaklığa, baskılara ve sürgünlere
+                karşı umudu hep diri tutan bir meydan okuyuştur. Yedigey
+                Cangeldi, cepheden döndükten sonra Kazak bozkırlarında küçük bir
+                tren aktarma istasyonunda çalışmaya başlar. Burada şahit olduğu
+                ve uzak geçmişinden hatırladığı olaylar, aslında yekpare bir
+                coğrafyaya kâbûs gibi çöken bir siyasî rejimin gümbür gümbür
+                çöküşünün sebepleridir. Aytmatov, insanı yok sayan ve onu
+                makineleştirmek isteyen sistemin aslında niçin çökmeye mahkûm
+                olduğunu bu romanında da gösteriyor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:640/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F39535_GCZmw_1507312578.jpg"
+                alt="Yasar_Kemal"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Kuşlar da Gitti</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                Kuşlar da Gitti, İstanbul’un çürüyen, kirlenen yüzünün ve
+                insanlığın da şehirle birlikte yok oluşunun romanıdır. Kuşların
+                bir zamanlar mekân tuttuğu İstanbul’da çocuklar onları
+                yakalayarak cami, kilise ve sinagogların kapılarında “azat buzat
+                beni cennet kapısında gözet” diyerek satarlar. Ancak çocuklar
+                satamadıkları kuşları yemek zorunda kalırlar.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:384/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F332663_7a930_1562179059.jpg"
+                alt="Ayse_Kulin"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">Adı:Aylin</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                Aylin Radomisli Cates, 19 Ocak 1995 Perşembe günü, evinin
+                bahçesinde, o sabah evini temizlemeye gelen hizmetçisi
+                tarafından, kendi arabasının altında ölü bulundu. Üstünde ve
+                etrafta nasıl öldüğüne dair hiçbir iz yoktu. Bir hırsızın
+                saldırısına uğramış değildi. Bir katille boğuşmamıştı. Elbisesi
+                yırtılmamış, tırnakları kırılmamıştı. Çorapları bile kaçmamıştı.
+                Kaptıkaçtı tipi arabası, parke taşı döşeli dümdüz avluda, aklın
+                alamayacağı bir nedenle kayarak, dört parmak yüksekliğindeki
+                seti atlamış, meyil aşağı inmiş, ön tekerlekleri yolda, arka
+                tekerlekleri duvara takılı durmuştu.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column" id="img-kitap">
+          <div class="img-kitap">
+            <a href="#">
+              <img
+                class="img-kitapp"
+                src="https://r2.1k-cdn.com/sig/size:640/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2Fkitaplar%2F39535_kj2pb_1519040073.jpg"
+                alt="Lev_Tolstoy"
+              />
+            </a>
+          </div>
+          <div class="img-kitap-ozet">
+            <div class="kitap-isim">
+              <h2 class="kitap-isim">İtiraflarım</h2>
+            </div>
+            <div class="kitap-ozet">
+              <p>
+                Maddi başarısı ve sosyal konumuna rağmen hayatını anlamsız bulan
+                Lev Tolstoy'un kendini ve dini anlamaya çalıştığı denemeleri
+                hayatı anlamaya çalışan herkese hitap ediyor. Çocukluğunda
+                öğretilenleri geride bırakmasıyla başladığı kendini bulma
+                yolculuğunda Tolstoy varoluşunun sebeplerini bilim, felsefe,
+                doğunun inanışları gibi pek çok farklı yerde arıyor.ine çeker.
+                Raif sadece yüreğinin peşinden gider.
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-genel">
+        <div class="footer">
+          <ul id="logo2-ul">
+            <li id="logo2">
+              <!-- logo footer sayfa -->
+              <a class="img-logo" href="homepage.html">
+                <img
+                  class="img-logo2"
+                  src="../img/fuuter.png"
+                  alt="Logo"
+                  width="150"
+                  height="150"
+              /></a>
+              <h4 id="footer-h4">
+                © 2023 Alıntı Atlası. Tüm Hakları Saklıdır.
+              </h4>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer">
+          <ul id="sss-ul">
+            <h3 class="h3-sss">SSS</h3>
+            <li class="sss-li">
+              <a href="../footer/hakkimizda.html">Hakkımızda</a>
+            </li>
+            <li class="sss-li">
+              <a href="../footer/iletisim.html">İletişim</a>
+            </li>
+            <li class="sss-li">
+              <a href="../footer/kullaniciSozlesmesi.html"
+                >Kullanıcı Sözleşmesi</a
+              >
+            </li>
+            <li class="sss-li">
+              <a href="../footer/gizlilikPolitikasi.html"
+                >Gizlilik Politikası</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <ul id="sss-ul">
+            <h3 class="h3-sss">Bizi Takip Edin</h3>
+            <li class="takipet-li">
+              <a href="https://instagram.com/dengnekir_?igshid=YTQwZjQ0NmI0OA=="
+                ><i class="fa-brands fa-instagram fa-2xl"></i
+              ></a>
+            </li>
+            <li class="takipet-li">
+              <a href="https://web.telegram.org/k/"
+                ><i class="fa-brands fa-telegram fa-2xl"></i
+              ></a>
+            </li>
+            <li class="takipet-li">
+              <a href="https://twitter.com/">
+                <i class="fa-brands fa-x-twitter fa-2xl"></i
+              ></a>
+            </li>
+            <ul class="iletisim">
+              <li class="iletisim-footer">
+                <i class="fa-solid fa-envelope"></i>
+              </li>
+              <li class="iletisim-footer">ferhatuslu@stu.topkapi.edu.tr</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

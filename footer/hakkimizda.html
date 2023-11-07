@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="img/alıntıatlası.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../img/alıntıatlası.png"
+      type="image/x-icon"
+    />
     <!-- css link -->
     <link rel="stylesheet" href="footer.css" />
     <meta charset="UTF-8" />
@@ -21,6 +25,10 @@
     />
     <!-- css kodları -->
     <style>
+      body {
+        background-image: linear-gradient(#fff, #bfbfbf);
+        font-size: 62.5%;
+      }
       /* ilk harfi buyuk yazma */
       p::first-letter {
         font-size: 45px;
@@ -28,13 +36,37 @@
       h1 {
         text-align: center;
       }
-      .bolum1 {
-        padding: 50px 200px;
-      }
+
       p {
         text-align: center;
         font-size: 20px;
         font-family: "Edu TAS Beginner", cursive;
+      }
+      @media (max-width: 768px) {
+        p {
+          font-size: 1rem;
+        }
+        .main-ana {
+          margin: 12rem 15rem;
+        }
+        p::first-letter {
+          font-size: 1.5rem;
+        }
+      }
+      @media (min-width: 769px) and (max-width: 1500px) {
+        .main-ana {
+          margin: 15rem 25rem;
+          display: flex;
+        }
+        p {
+          font-size: 2rem;
+        }
+        p::first-letter {
+          font-size: 4.5rem;
+        }
+        #h1 {
+          font-size: 3rem;
+        }
       }
     </style>
   </head>
@@ -63,12 +95,10 @@
               <!-- yonlendirilme yerleri -->
               <ul class="yonlendirme-ul">
                 <li class="yonlendirme-li">
-                  <a class="kesfet" href="../header/kesfet.html">Keşfet</a>
+                  <a class="kesfet" href="../homepage.html #bolum2  ">Keşfet</a>
                 </li>
                 <li class="yonlendirme-li">
-                  <a class="hakkimizda" href="../footer/hakkimizda.html"
-                    >Hakkımızda</a
-                  >
+                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
                 </li>
                 <li class="yonlendirme-li">
                   <a class="alintivesoz" href="../header/alintilarVeSozler.html"
@@ -148,7 +178,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer id="footer">
       <div class="footer-genel">
         <div class="footer">
           <ul>

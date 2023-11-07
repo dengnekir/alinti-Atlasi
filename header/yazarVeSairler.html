@@ -1,10 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- document ikon -->
+    <link
+      rel="shortcut icon"
+      href="../img/alıntıatlası.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="header.css" />
     <link rel="shortcut icon" href="img/alıntıatlası.png" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yazarlar ve Şairler</title>
+   
+     <!-- icon kütüphanesi -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+   />
+    <style>
+            #ikon {
+        font-size: 1.4rem;
+        color: gray;
+      }
+      #ikon:hover{
+        color:black;
+      }
+      #input {
+        border-radius: 4rem;
+        width: 50%;
+        padding: 1rem 8rem;
+      }
+      .input {
+        margin-top: 15rem;
+        text-align: center;
+      }
+      #input:focus {
+        color: white;
+        background-color: #dfd7d7;
+      }
+      body {
+        font-size: 62.5%;
+       
+      }
+      .div-ana1 {
+        padding: 19vh 5vh 5vh 5vh;
+      }
+      .main-ana{
+        
+        background-image: linear-gradient(#fff, #d9d9d9);
+      }
+      .row{
+        display: flex;
+        margin: 5rem 0rem;
+        margin-left: 4rem;
+      }
+      .row img {
+        border-radius: 3%;
+        height: 30vh;
+        width: 30vh;
+        filter: grayscale(100%);
+        
+      }
+      .row img:hover{
+        transform:translateY(-10px);
+        transition: .5s;
+        filter: grayscale(0%);      
+        cursor: pointer;
+      }
+      .column{
+        margin: 3rem 3rem;
+      }
+      h1{
+        font-size: 5rem;
+        text-align: center;
+      }
+      h2{
+        font-size: 2rem;
+        text-align: center;
+      }
+      @media (max-width: 576px){
+        #ikon {
+        font-size: 1rem;
+      }
+      #input {
+        padding: 1rem 4rem;
+      }
+      .input {
+        margin-top: 15rem;
+      }
+        .div-ana1 {
+        margin: 1vh 3vh 2vh 3vh;
+      
+      }
+      .row{
+        display: flex;
+        margin: 1rem 0rem;
+      }
+      .row img {
+        height: 10vh;
+        width: 10vh;
+      }
+      .row img:hover{
+        transform:translateY(-4px);
+        transition: .5s;
+      }
+      .column{
+        margin: .5rem .5rem;
+      }
+      h1{
+        font-size: 2rem;
+        text-align: center;
+      }
+      h2{
+        font-size: .6rem;
+        text-align: center;
+      }
+      }
+      @media (min-width: 577px) and (max-width: 768px) {
+        #ikon {
+        font-size: 1.2rem;
+      }
+      #input {
+        padding: 1rem 6rem;
+      }
+      .input {
+        margin-top: 15rem;
+      }
+        .div-ana1 {
+        margin: 15vh 5vh 0vh 5vh;
+      }
+      .row{
+        display: flex;
+        margin: 1rem 0rem;
+      }
+      .row img {
+        height: 15vh;
+        width: 15vh;
+      }
+      .row img:hover{
+        transform:translateY(-4px);
+        transition: .5s;
+      }
+      .column{
+        margin: .5rem .5rem;
+      }
+      h1{
+        font-size: 2rem;
+        text-align: center;
+      }
+      h2{
+        font-size: .6rem;
+        text-align: center;
+      }
+      }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .div-ana1 {
+        margin: 15vh 7vh 0vh 7vh;
+      }
+      .row{
+        display: flex;
+        margin: 2rem 0rem;
+      }
+      .row img {
+        height: 15vh;
+        width: 15vh;
+      }
+      .row img:hover{
+        transform:translateY(-8px);
+        transition: .5s;
+      }
+      .column{
+        margin: 1rem 1rem;
+      }
+      h1{
+        font-size: 3rem;
+        text-align: center;
+      }
+      h2{
+        font-size: 1rem;
+        text-align: center;
+      }
+      }
+      @media (min-width: 992px) and (max-width: 1200px) {
+        .div-ana1 {
+        margin: 15vh 5vh 0vh 5vh;
+      }
+      .row{
+        display: flex;
+        margin: 4rem 0rem;
+      }
+      .row img {
+        height: 20vh;
+        width: 20vh;
+      }
+      .row img:hover{
+        transform:translateY(-9px);
+        transition: .5s;
+      }
+      .column{
+        margin: 2rem 2rem;
+      }
+      h1{
+        font-size: 4rem;
+        text-align: center;
+      }
+      h2{
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header class="header" id="header">
+      <table class="table">
+        <tr>
+          <td id="img-logo">
+            <!-- logo ana sayfa -->
+            <a class="img-logo" href="../homepage.html">
+              <img
+                class="img-logo1"
+                src="../img/alıntıatlası.png"
+                alt="Logo"
+                width="90px"
+                ;
+                height="90px"
+                ;
+            /></a>
+          </td>
+          <td>
+            <h1 class="baslik">Alıntı Atlası</h1>
+          </td>
+          <td>
+            <nav id="yonlendirme">
+              <!-- yonlendirilme yerleri -->
+              <ul class="yonlendirme-ul">
+                <li class="yonlendirme-li">
+                  <a class="kesfet" href="../homepage.html #bolum2">Keşfet</a>
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="alintivesoz" href="alintilarVeSozler.html"
+                    >Alıntılar ve Sözler</a
+                  >
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="yazarvesair" href="#">Yazarlar ve Şairler</a>
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="kitapZirvesi" href="klasikKitapZirvesi.html"
+                    >Kitap Zirvesi</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </td>
+          <td>
+            <nav id="kayitolma">
+              <!-- kayıt olma kısmı -->
+              <ul class="kayitolma-ul">
+                <li class="kayitolma-li">
+                  <a href="kayitOl.html">Kayıt Ol</a>
+                </li>
+                <li class="kayitolma-li">
+                  <a href="girisYap.html">Giriş Yap</a>
+                </li>
+              </ul>
+            </nav>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <div class="input">
+      <input id="input" type="text" />
+      <a href="#" id="ikon">
+        <i class="fa-solid fa-magnifying-glass fa-2xl"></i
+      ></a>
+    </div>
+    <main class="main-ana">
+      <div class="div-ana1">
+        <div >
+          <h1>Yazar ve Şairler</h1>
+        </div class="div-ana1">
+        <div class="row">
+          <div class="column">
+            <h2>Nazım Hikmet</h2>
+            <a href="#">
+            <img
+              class="img-yazar"
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Nazim_Hikmet.jpg"
+              alt="Nazim_Hikmet"
+            />
+          </a>
+          </div>
+          <div class="column">            
+            <h2>Cengiz Dağcı</h2>
+            <a href="#">
+            <img
+              src="https://admin.biyografya.com/_docs/photos/b3c3633ba59805ab75b6b0f8d6b03035.jpg"
+              alt="Cengiz_Dagci"
+            />
+          </a>
+          </div>
+          <div class="column">          
+            <h2>Agatha Christie</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Agatha_Christie.png"
+              alt="Agatha_Christie"
+            />
+          </a>
+          </div>
+          <div class="column">          
+            <h2>Stefan Zweig</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Stefan_Zweig2.png"
+              alt="Stefan_Zweig"
+            />
+          </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <h2>Sabahattin Ali</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/tr/f/f6/Sabahattin_ali.jpg"
+              alt="Sabahattin_ali"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Charles Dickens</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Dickens_Gurney_head.jpg"
+              alt="Charles_Dickens"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Ömer Zülfü Livaneli</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Z%C3%BClf%C3%BC_Livaneli_2018_%28cropped%29.jpg"
+              alt="Omer_Zulfu_Livaneli"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Cemal Süreya</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/tr/f/f2/Cemal_S%C3%BCreya.jpg"
+              alt="Cemal_Sureya"
+            />
+          </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <h2>Ayşe Külin</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d1/AyseKulin2011.jpg"
+              alt="Ayse_Kulin"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Peyami Safa</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/tr/c/c4/Peyami_Safa_portre.jpg"
+              alt="Peyami_Safa"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Orhan Pamuk</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/93/Orhan_Pamuk_2009_Shankbone.jpg"
+              alt="Orhan_Pamuk"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Yaşar Kemal</h2>
+            <a href="#">
+            <img
+              src="https://sehrivangazetesicom.teimg.com/crop/1280x720/sehrivangazetesi-com/uploads/2023/05/usta-yazar-yasar-kemal-aniliyor.jpg"
+              alt="Yasar_kemal"
+            />
+          </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <h2>Mehmed Uzun</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/tr/3/32/Mehmed_uzun.jpg"
+              alt="Mehmed_Uzun"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Albert Camus</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/db/Camus_Harcourt_1945.jpg"
+              alt="Albert_Camus"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Doğan Cüceloğlu</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/42/Do%C4%9Fan_C%C3%BCcelo%C4%9Flu_visiting_Uskudar_University_%28cropped%29.jpg"
+              alt="Dogan_Cüceloglu"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>George Orwell</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/44/George_Orwell%2C_c._1940_%2841928180381%29_%28cropped%29.jpg"
+              alt="George_Orwell"
+            />
+          </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <h2>Franz Kafka</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Kafka.jpg"
+              alt="Franz_Kafka"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Amin Maakouf</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Amin_Maalouf_par_Claude_Truong-Ngoc_novembre_2013.jpg"
+              alt="Amin_Maalouf"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Jack London</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Jack_London_young.jpg"
+              alt="Jack_London"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Cahit Zarifoğlu</h2>
+            <a href="#">
+            <img
+              src="https://cdnuploads.aa.com.tr/uploads/Contents/2020/06/07/thumbs_b_c_7fa8f4517d1e6dcab298d51be48b35dc.jpg?v=110405"
+              alt="Cahit_Zarifoglu"
+            />
+          </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <h2>Turgut Uyar</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/tr/8/86/TurgutUyar.jpg"
+              alt="Turgut_Uyar"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Fyador Mihailoviç Dostoyevski</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg"
+              alt="Fyador_Mihailovic_Dostoyevski"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>J. K. Rowling</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg"
+              alt="J_K_Rowling"
+            />
+          </a>
+          </div>
+          <div class="column">
+            <h2>Kemal Tahir</h2>
+            <a href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/tr/e/e1/Kemal_Tahir_portre.jpg"
+              alt="Kemal_Tahir"
+            />
+          </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-genel">
+        <div class="footer">
+          <ul id="logo2-ul">
+            <li id="logo2">
+              <!-- logo footer sayfa -->
+              <a class="img-logo" href="homepage.html">
+                <img
+                  class="img-logo2"
+                  src="../img/fuuter.png"
+                  alt="Logo"
+                  width="150"
+                  height="150"
+              /></a>
+              <h4 id="footer-h4">
+                © 2023 Alıntı Atlası. Tüm Hakları Saklıdır.
+              </h4>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer">
+          <ul id="sss-ul">
+            <h3 class="h3-sss">SSS</h3>
+            <li class="sss-li">
+              <a href="../footer/hakkimizda.html">Hakkımızda</a>
+            </li>
+            <li class="sss-li">
+              <a href="../footer/iletisim.html">İletişim</a>
+            </li>
+            <li class="sss-li">
+              <a href="../footer/kullaniciSozlesmesi.html">Kullanıcı Sözleşmesi</a>
+            </li>
+            <li class="sss-li">
+              <a href="../footer/gizlilikPolitikasi.html">Gizlilik Politikası</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <ul id="sss-ul">
+            <h3 class="h3-sss">Bizi Takip Edin</h3>
+            <li class="takipet-li">
+              <a href="https://instagram.com/dengnekir_?igshid=YTQwZjQ0NmI0OA=="
+                ><i class="fa-brands fa-instagram fa-2xl"></i
+              ></a>
+            </li>
+            <li class="takipet-li">
+              <a href="https://web.telegram.org/k/"
+                ><i class="fa-brands fa-telegram fa-2xl"></i
+              ></a>
+            </li>
+            <li class="takipet-li">
+              <a href="https://twitter.com/">
+                <i class="fa-brands fa-x-twitter fa-2xl"></i
+              ></a>
+            </li>
+            <ul class="iletisim">
+              <li class="iletisim-footer">
+                <i class="fa-solid fa-envelope"></i>
+              </li>
+              <li class="iletisim-footer">ferhatuslu@stu.topkapi.edu.tr</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

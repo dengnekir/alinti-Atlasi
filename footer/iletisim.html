@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="img/alıntıatlası.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../img/alıntıatlası.png"
+      type="image/x-icon"
+    />
     <!-- css link -->
     <link rel="stylesheet" href="footer.css" />
     <meta charset="UTF-8" />
@@ -26,27 +30,66 @@
     />
     <!-- css -->
     <style>
+      body {
+        background-image: linear-gradient(#fff, #bfbfbf);
+        font-size: 62.5%;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
       h1 {
         text-align: center;
+        font-size: 5rem;
+      }
+      h2 {
+        font-size: 4rem;
       }
       .row {
         display: block;
-        margin: 80px 200px;
+        margin: 12rem 15rem;
         padding: 0;
       }
       /* ilk harfi buyuk yazma */
       p::first-letter {
-        font-size: 45px;
+        font-size: 3rem;
       }
       /* paragraf style */
       p {
         text-align: start;
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 600;
         font-family: "Edu TAS Beginner", cursive;
       }
       .column {
         display: inline-block;
+      }
+      @media (max-width: 768px) {
+        h4 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        .row {
+          margin: 3rem 5rem;
+        }
+        .column-img {
+          margin-left: 4rem;
+        }
+      }
+      @media (min-width: 769px) and (max-width: 1300px) {
+        h4 {
+          font-size: 1.2rem;
+        }
+        h2 {
+          font-size: 3rem;
+        }
+        .row {
+          margin: 6rem 10rem;
+        }
+        .column-img {
+          margin-left: 4rem;
+        }
       }
     </style>
   </head>
@@ -75,12 +118,10 @@
               <!-- yonlendirilme yerleri -->
               <ul class="yonlendirme-ul">
                 <li class="yonlendirme-li">
-                  <a class="kesfet" href="../header/kesfet.html">Keşfet</a>
+                  <a class="kesfet" href="../homepage.html #bolum2">Keşfet</a>
                 </li>
                 <li class="yonlendirme-li">
-                  <a class="hakkimizda" href="../footer/hakkimizda.html"
-                    >Hakkımızda</a
-                  >
+                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
                 </li>
                 <li class="yonlendirme-li">
                   <a class="alintivesoz" href="../header/alintilarVeSozler.html"
@@ -157,11 +198,11 @@
           </div>
         </div>
         <div class="column">
-          <img src="../img/iletisim.png" alt="iletisim" />
+          <img class="column-img" src="../img/iletisim.png" alt="iletisim" />
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <div class="footer-genel">
         <div class="footer">
           <ul>

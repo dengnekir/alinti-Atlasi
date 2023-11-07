@@ -1,11 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- icon title -->
-    <link rel="shortcut icon" href="img/alıntıatlası.png" type="image/x-icon" />
+    <!-- ikon -->
+    <link rel="shortcut icon" href="../img/alıntıatlası.png" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="header.css" />
+        <!-- icon kütüphanesi -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alıntılar ve Sözler</title>
+    <style>
+      body{
+        font-size: 62.5%;
+        margin-top: 15rem;
+      }
+      .main-ana{
+        background-image: linear-gradient(#fff, #d9d9d9);
+        font-family: "Edu TAS Beginner", cursive;
+      }
+      h1{
+        text-align: center;
+        font-size: 4rem;
+      }
+      p{
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top:1vh;
+        padding-bottom: 5vh;
+      }
+     
+      .row {
+        padding: 2.5rem;
+        text-align: center;
+      }
+      .column {
+        display: inline-block;
+        vertical-align: text-top;
+        width: calc(25% - 4px);
+        height: 60vh;
+      }
+      .column h3 {
+        box-shadow: rgba(103, 99, 99, 0.56) 0.31rem 0.62rem 3.43rem 0rem;
+        background-color:#9e9797;
+      }
+      .imgyazar {
+        padding: 0rem 6.87rem;
+        width: 18rem;
+        height: 15rem;
+        filter: grayscale(100%);
+      }
+      .imgyazar:hover{
+        filter:grayscale(0);
+        transition: .5s;
+        transform:translateY(-10px);
+      }
+      h3,h4{
+        font-size: 1.6rem;
+      }
+      @media (max-width: 576px) {
+      h1{
+        text-align: center;
+        font-size: 2rem;
+      }
+      p{
+        font-size: .8rem;
+        padding-top:1vh;
+        padding-bottom: 3vh;
+      }
+      .row {
+        padding: 1.5rem;
+      }
+      .column {
+        width: calc(25% - 4px);
+        height: 40vh;
+      }
+      .imgyazar {
+        padding: 0rem 1.87rem;
+        width: 9rem;
+        height: 9rem;
+      }
+      h3,h4{
+        font-size: 1.3rem;
+      }
+      }
+      @media (min-width: 577px) and (max-width: 992px) {
+        h1{
+        font-size: 3rem;
+      }
+      p{
+        font-size: 1rem;
+        padding-top:1vh;
+        padding-bottom: 4vh;
+      }
+      .row {
+        padding: 2rem;     
+      }
+      .column {
+        height: 50vh;
+      }
+      .imgyazar {
+        padding: 0rem 1.87rem;
+        width: 14rem;
+        height: 14rem;
+      }
+      h3,h4{
+        font-size: 1.3rem;
+      }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header class="header" id="header">
+      <table class="table">
+        <tr>
+          <td id="img-logo">
+            <!-- logo ana sayfa -->
+            <a class="img-logo" href="../homepage.html">
+              <img
+                class="img-logo1"
+                src="../img/alıntıatlası.png"
+                alt="Logo"
+                width="90px"
+                ;
+                height="90px"
+                ;
+            /></a>
+          </td>
+          <td>
+            <h1 class="baslik">Alıntı Atlası</h1>
+          </td>
+          <td>
+            <nav id="yonlendirme">
+              <!-- yonlendirilme yerleri -->
+              <ul class="yonlendirme-ul">
+                <li class="yonlendirme-li">
+                  <a class="kesfet" href="../homepage.html #bolum2">Keşfet</a>
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="alintivesoz" href="#"
+                    >Alıntılar ve Sözler</a
+                  >
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="yazarvesair" href="yazarVeSairler.html"
+                    >Yazarlar ve Şairler</a
+                  >
+                </li>
+                <li class="yonlendirme-li">
+                  <a class="kitapZirvesi" href="klasikKitapZirvesi.html">Kitap Zirvesi</a>
+                </li>
+              </ul>
+            </nav>
+          </td>
+          <td>
+            <nav id="kayitolma">
+              <!-- kayıt olma kısmı -->
+              <ul class="kayitolma-ul">
+                <li class="kayitolma-li">
+                  <a href="kayitOl.html">Kayıt Ol</a>
+                </li>
+                <li class="kayitolma-li">
+                  <a href="girisYap.html">Giriş Yap</a>
+                </li>
+              </ul>
+            </nav>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <main class="main-ana">
+      <h1>Kelimelerin Dünyasında Bir Yolculuk</h1>
+      <p>
+        Kitap alıntılarından oluşan bir koleksiyon. Edebiyatın derinliklerine
+        dalıyoruz.
+      </p>
+      <h1>Edebiyatın İncileri</h1>
+
+      <p>
+        Kitap alıntıları ve edebi sözlerin evi. En iyi kitaplardan gelen en
+        güzel alıntıların sahipleri.
+      </p>
+      <section>
+        <div class="row" id="row">
+          <div class="column">
+            <h3>Stefan Zweig</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/Stefan-Zweig.png"
+              alt="Stefan_Zweig"
+            />
+            <p>
+              Sen, beni asla, asla tanımayan, bir su birikintisinin yanından geçercesine yanımdan geçip giden, bir taşa basarcasına üstüme basan, hep, ama hep yoluna devam eden ve beni sonsuz bir bekleyiş içerisinde bırakan sen, kimsin ki benim için? <br> <h4 id="kitap-isim">Bilinmeyen Bir Kadının Mektubu</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Anton Çehov</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/anton-cehov.png"
+              alt="Anton_Cehov"
+            />
+            <p>
+              Sakın bana sevmeyi bilmediğimi söylemeyin. Üzüntüyü, hüznü, yağ gibi erimeyi, Aşk nedir, demeyin bana!
+              Nedir özlemin ağrısı, nedir hüzün, nedir yağ gibi erimek, zavallılaşmak ? Ben de cayır cayır yandım bir zamanlar. <br> <h4 id="kitap-isim">Tütünün Zararları</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Nazım Himet</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/NazımHikmet.png"
+              alt="NazımHikmet"
+            />
+            <p>
+              Muhakkak bir gün seninle ben aynı anda birbirimizi düşüneceğiz, <br>
+              yeter ki sen ömrünün herhangi bir saniyesinde de olsa beni
+              düşün. <br> <h4>Piraye'ye Mektuplar</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Doğan Cüceloğlu</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/dogan-cuceloglu.png"
+              alt="Doğan_Cuceloğlu"
+            />
+            <p>
+              “İnsan bir şeyi yapmaya karar verdi mi, sonuna kadar gitmeli; yaptığı şeyden sorumluluk almalı. Ne yaparsa yapsın, önce niçin onu yaptığını bilmeli, ve daha sonra yaptıklarını hiç kuşkulanmadan, çekinmeden, bütün gücünü vererek yapmalı. “<br>
+              <h4>Savaşçı</h4>
+            </p>
+          </div>
+        </div>
+        <div class="row" id="row">
+          <div class="column">
+            <h3>Maksim Gorki</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/maksim-gorki.png"
+              alt="Maksim_Gorki"
+            />
+            <p>
+              Kendi kendinin patronu olmayı öğren, kimsenin etkisi altında kalma! Sessiz... sakin... ama inatla yaşa! Herkesi dinle, ama senin için en iyisi neyse, onu yap..." <br> <h4>Çocukluğum</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Cemal Süreya</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/cemalsureya.png"
+              alt="cemalsureya"
+            />
+            <p>
+              ''Evleniriz belki bir gün.. <br>
+              Çocuklarımız olur; <br>
+              Bana benzer şair olur, <br>
+              Sana benzer şiir olur..'' <br> <h4>Sevda Sözleri</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Artur Conan Doyle</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/artur-conan-doyle.png"
+              alt="Artut_Conan_Doyle"
+            />
+            <p>
+              Beynim her zaman kalbime hükmettiği için kadınlara çok kapılmamışımdır ama şimdi kızın kusursuz yüz hatlarından, yaylaların yumuşak tazeliğinin hayat kattığı teninden ben bile gözlerimi alamıyordum.<br> <h4>
+                Sherlock Holmes - Aklın Şüphesi Suçun Gerçeğidir</h4>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row" id="row">
+          <div class="column">
+            <h3>Ahmed Arif</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/ahmedArif.png"
+              alt="ahmedArif"
+            />
+            <p>
+              Rüya, bütün çektiğimiz. Rüya kahrım, rüya zindan. <br> Nasıl da
+              yılları buldu, Bir mısra boyu maceram... <br> Bilmezler nasıl aradık
+              birbirimizi, <br> Bilmezler nasıl sevdik, iki yitik hasret, İki parça
+              can. <br> <h4 id="kitap-isim">Suskun</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Can Yücel</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/can-yucel.png"
+              alt="Can_Yucel"
+            />
+            <p>
+              Öyle parçalandım ki ömrümde <br>
+              Sevgiyle öfke arasında, <br>
+              Sevgimi öfke vurdu <br>
+              Öfkemi sevgi kaçırdı <br>
+              İçim parçalandı arada. <br> <h4 id="kitap-isim">Sevgi Duvarı</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Reşat Nuri Gültekin</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/resat-nuri-guntekin.png"
+              alt="Resat_Nuri_gultekin"
+            />
+            <p>
+              Sevecek bir hakiki insan bulanlara şaşmak lazım... Çünkü onun bir hayalini bile bulmak o kadar güç, o kadar güç ki... <br> <h4>Çalıkuşu</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Orhan Veli Kanık</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/orhan-veli-kanık.png"
+              alt="Orhan_Veli_Kanık"
+            />
+            <p>
+              Bilmezdim şarkılarım bu kadar güzel, <br>
+              Kelimelerinse kifayetsiz olduğunu <br>
+              Bu derde düşmeden önce. <br>
+              <h4>Bütün Şiirleri</h4>
+            </p>
+          </div>
+        </div>
+        <div class="row" id="row">
+          <div class="column">
+            <h3>Mehmed Uzun</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/mehmeduzun.png"
+              alt="MehmedUzun"
+            />
+            <p>
+              Bir düşteymiş gibi kesik kesik konuşan kızın son sözleri karşısında tutamıyorum kendimi, <br> "Bak kar yağıyor," diyorum, <br> "Karın güzelliğine baksana..." <br> <h4>Aşk Gibi Aydınlık Ölüm Gibi Karanlık</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Murathan Mungan</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/murathanmungan.png"
+              alt="Murathan_Mungan"
+            />
+            <p>
+              Zamanla yerleşir yaşadıkların, yeniden konumlanır, çoğalır anlamları, önemi kavranır. Bir zamanlar anlamadan yaşadığın şey, çok sonradan değerini kazanır. Yokluğu derin ve sürekli bir sızı halini alır. <br> <h4>Yaz Geçer</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>George Orwell</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/George_Orwel.png"
+              alt="George_Orwell"
+            />
+            <p>
+              İnsan üretmeden tüketen tek yaratıktır. Süt vermez, yumurta yumurtlamaz, sabanı çekecek gücü yoktur, tavşan yakalayacak kadar hızlı koşamaz. Gene de tüm hayvanların efendisidir. <br> <h4>Hayvan Çiftliği</h4>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row" id="row">
+          <div class="column">
+            <h3>Marlo Morgan </h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/marlo-morgan.png"
+              alt="Marlo_Morgen"
+            />
+            <p>
+              Tanrım, bana değiştiremeyeceğim şeyleri kabul etme gücü, değiştirebileceğim şeyleri değiştirme cesareti ve bu ikisi arasındaki farkı anlayabilme sağduyusu ver. <br> <h4 id="kitap-isim">Bir Çift Yürek</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Hikmet Anıl Öztekin</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/hikmet-anıl-öztekin.png"
+              alt="Hikmet_Anıl_Öztekin"
+            />
+            <p>
+              Aslında O hep var da biz onu ancak en yalnız halimizle görebiliyoruz. Ancak aciz hissettiğimizde hatırlıyoruz. Bu sefer de güçleniyorsun. Çünkü öyle bir şey var ki yanında, öyle bir güç var ki... Biraz hüzünlensen, biraz dertlensen tutuyor elinden. <br> <h4 id="kitap-isim">Eyvallah 1</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Alexander Dumas</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/alexander-dumas.png"
+              alt="Alexander_Dumas"
+            />
+            <p>
+              "Tanrım, bunun açıklaması çok basit; iktidarı elinde tutan sizlerin elinde sadece paranın sağladığı olanaklar var; oysa iktidarı hedefleyen bizlerin elinde bağlılığın araçları var."<br> <h4>Monte Cristo Kontu (2 Cilt Takım)</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Stephan King</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/Stephen-King.png"
+              alt="Stephan_Kİng"
+            />
+            <p>
+              Baştan sona kadar iyi geçen günler zaten azdır. Belki de bir insanın yaşamındaki gerçekten iyi günlerin toplamı bir ay bile değildir.<br>
+              <h4>Hayvan Mezarlığı</h4>
+            </p>
+          </div>
+        </div>
+        <div class="row" id="row">
+          <div class="column">
+            <h3>Frida Kahlo</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/frida-kahlo.png"
+              alt="Frida_Kahlo"
+            />
+            <p>
+              Bir dik duruşun;
+              kaç yenilgi, kaç gözyaşı,
+              kaç kalp ağrısı ettiğini bilemezsiniz... <br> <h4>Hissettiğin Kadar Yalnızsın</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Ahmet Batman </h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/ahmet-batman.png"
+              alt="Ahmet_Batman "
+            />
+            <p>
+              Kavanoza hapsettiğin balığı, kafese hapsettiğin kuşu sevdiğini sanıyorsun değil mi? Aslında onları değil sana ait oluşlarını seviyosun…Gerçek sevgi sahip olmadığına karşı gösterdiklerinde gizlidir <br> <h4>Beni İçinden Sev</h4>
+            </p>
+          </div>
+          <div class="column">
+            <h3>Orhan Pamuk</h3>
+            <img
+              class="imgyazar"
+              src="../img/kisiler/orhanpamuk.png"
+              alt="orhanpamuk"
+            />
+            <p>
+              Bir kadınla üç şey yapabilirsin: <br> Ya onu seversin, ya onun için acı çekersin ya da onu yazarsın. <br> <h4>Kırmızı Saçlı Kadın</h4>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="footer-genel">
+        <div class="footer">
+          <ul id="logo2-ul">
+            <li id="logo2">
+              <!-- logo footer sayfa -->
+              <a class="img-logo" href="homepage.html">
+                <img
+                  class="img-logo2"
+                  src="../img/fuuter.png"
+                  alt="Logo"
+                  width="150"
+                  height="150"
+              /></a>
+              <h4 id="footer-h4">
+                © 2023 Alıntı Atlası. Tüm Hakları Saklıdır.
+              </h4>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer">
+          <ul id="sss-ul">
+            <h3 class="h3-sss">SSS</h3>
+            <li class="sss-li">
+              <a href="../footer/hakkimizda.html">Hakkımızda</a>
+            </li>
+            <li class="sss-li">
+              <a href="../footer/iletisim.html">İletişim</a>
+            </li>
+            <li class="sss-li">
+              <a href="../footer/kullaniciSozlesmesi.html"
+                >Kullanıcı Sözleşmesi</a
+              >
+            </li>
+            <li class="sss-li">
+              <a href="../footer/gizlilikPolitikasi.html"
+                >Gizlilik Politikası</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <ul id="sss-ul">
+            <h3 class="h3-sss">Bizi Takip Edin</h3>
+            <li class="takipet-li">
+              <a href="https://instagram.com/dengnekir_?igshid=YTQwZjQ0NmI0OA=="
+                ><i class="fa-brands fa-instagram fa-2xl"></i
+              ></a>
+            </li>
+            <li class="takipet-li">
+              <a href="https://web.telegram.org/k/"
+                ><i class="fa-brands fa-telegram fa-2xl"></i
+              ></a>
+            </li>
+            <li class="takipet-li">
+              <a href="https://twitter.com/">
+                <i class="fa-brands fa-x-twitter fa-2xl"></i
+              ></a>
+            </li>
+            <ul class="iletisim">
+              <li class="iletisim-footer">
+                <i class="fa-solid fa-envelope"></i>
+              </li>
+              <li class="iletisim-footer">ferhatuslu@stu.topkapi.edu.tr</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

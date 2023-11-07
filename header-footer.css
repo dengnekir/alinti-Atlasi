@@ -1,11 +1,23 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+}
+.baslik {
+  color: rgb(22, 13, 0);
+  font-size: 2.6rem;
+}
 #yonlendirme {
   text-align: left;
-  padding-top: 20px;
+  padding-top: 1.15rem;
 }
 #kayitolma {
-  padding-top: 20px;
+  padding-top: 1.15rem;
 }
 header {
+  display: flex;
   position: fixed;
   z-index: 1000;
   width: 100%;
@@ -18,16 +30,17 @@ header a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
-  font-size: 21px;
+  font-size: 2.2rem;
 }
 /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar.linkler arası boşluk bıraktırır */
 .yonlendirme-li {
-  padding: 15px;
+  padding: 0.5rem;
   display: inline-block;
 }
 /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar. linkler arası boşluk bıraktırır */
 .kayitolma-li {
-  padding-left: 20px;
+  vertical-align: left;
+  padding-left: 3rem;
   display: inline-block;
 }
 /* ziyaret edilmeden önceki kink rengi */
@@ -40,7 +53,7 @@ header a:visited {
 }
 /* linkin uzerine gittikten sonra arkaplan verir */
 .yonlendirme-li a:hover {
-  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  box-shadow: rgb(0, 0, 0) 0rem 1.3rem 1.9rem -1rem;
   color: black;
   background-color: rgba(223, 222, 222, 0.578);
   transition: 0.2s;
@@ -53,13 +66,13 @@ a:active {
 /* kayıt linkine şekil verme */
 .kayitolma-li a {
   background-color: rgba(223, 222, 222, 0.578);
-  padding: 0px 16px;
-  border-radius: 8px;
+  padding: 0 1.5rem;
+  border-radius: 0.7rem;
   border: 1px solid rgba(223, 222, 222, 0.578);
 }
 /* üzerine gelinceki renk */
 .kayitolma-li a:hover {
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0 1.4rem 15rem 0.4rem;
   color: #fff;
   background-color: rgba(22, 16, 16, 0.578);
   transition: 0.7s;
@@ -71,12 +84,18 @@ a:active {
   margin-bottom: auto;
   padding: 0;
 }
+
 .footer {
   display: inline-block;
   width: 33%;
-  height: 300px;
+  height: 35vh;
 
   vertical-align: top;
+}
+footer h4 {
+  font-size: 1.6rem;
+  padding-top: 5rem;
+  padding-left: 2rem;
 }
 footer a {
   text-decoration: none;
@@ -93,6 +112,7 @@ footer a {
   list-style-type: none;
 }
 footer a:link {
+  font-size: 1.9rem;
   color: rgb(31, 29, 29);
 }
 footer a:hover {
@@ -105,7 +125,8 @@ footer a:visited {
 .takipet-li a:hover {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   color: black;
-  background-color: rgba(223, 222, 222, 0.578);
+  background-color: rgba(196, 193, 193, 0.578);
+  border-radius: 50%;
 }
 .sss-li a:hover {
   color: black;
@@ -115,33 +136,386 @@ footer a:visited {
 footer a:active {
   color: black;
 }
+/* hakkımızda */
 .sss-li {
   display: block;
-  padding: 9px;
+  padding: 1.2rem;
   text-decoration: none;
-
   font-weight: bold;
-  font-size: 16px;
+  font-size: 2rem;
 }
 
 .h3-sss {
   text-align: center left;
-  padding-left: 10px;
+  padding-left: 1rem;
   font-weight: 600;
-  font-size: x-large;
+  font-size: 2.5rem;
 }
 .takipet-li {
   display: inline-block;
-  padding: 10px;
+  padding: 1.8rem;
 }
 .iletisim-footer {
   display: inline-block;
-  padding-right: 20px;
+  padding-right: 2srem;
 
   list-style-type: none;
 }
 .iletisim {
   text-align: left;
-  margin: 25px 9px;
+  margin: 3rem 1.5rem;
   padding: 0;
+  padding-top: 6rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+/* ***************RESPONSİVE********************** */
+@media (max-width: 576px) {
+  .img-logo1 {
+    width: 70px;
+    height: 70px;
+  }
+  .baslik {
+    color: rgb(22, 13, 0);
+    font-size: 1.8rem;
+  }
+  #yonlendirme {
+    text-align: left;
+    padding-top: 0;
+  }
+  #kayitolma {
+    padding-top: 0;
+  }
+  header {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    width: 576px;
+    top: 0;
+    background-color: white;
+  }
+
+  /* linklere genel tasarımı verme */
+  header a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar.linkler arası boşluk bıraktırır */
+  .yonlendirme-li {
+    padding: 0.2rem;
+    display: flex;
+  }
+  /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar. linkler arası boşluk bıraktırır */
+  .kayitolma-li {
+    padding: 0.3rem 5.2rem;
+    display: flex;
+  }
+  #logo2-ul {
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
+  .img-logo2 {
+    width: 70px;
+    height: 70px;
+  }
+  .footer {
+    display: inline-block;
+    width: 140px;
+    height: 17vh;
+  }
+  footer h4 {
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+  footer a:link {
+    font-size: 0.9rem;
+    color: rgb(31, 29, 29);
+  }
+  /* hakkımızda */
+  .sss-li {
+    display: inline-block;
+    padding: 0.6rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .h3-sss {
+    text-align: center left;
+    padding-left: 0.3rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  .takipet-li {
+    display: inline-block;
+    padding: 2rem 0.7rem;
+  }
+  .iletisim-footer {
+    padding-left: 0.2rem;
+    list-style-type: none;
+  }
+  .iletisim {
+    display: flex;
+    text-align: left;
+    margin: 1rem 0.5rem;
+    padding-top: 1.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .img-logo1 {
+    width: 75px;
+    height: 75px;
+  }
+  .baslik {
+    font-size: 2rem;
+  }
+  #yonlendirme {
+    text-align: left;
+    padding-top: 0.5rem;
+  }
+  #kayitolma {
+    padding-top: 0.3rem;
+  }
+  header {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    width: 768px;
+  }
+
+  /* linklere genel tasarımı verme */
+  header a {
+    font-size: 1.2rem;
+  }
+  /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar.linkler arası boşluk bıraktırır */
+  .yonlendirme-li {
+    padding: 0.3rem;
+    display: inline-block;
+  }
+  /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar. linkler arası boşluk bıraktırır */
+  .kayitolma-li {
+    padding: 0.4rem 0.2rem;
+    display: inline-block;
+  }
+  #logo2-ul {
+    margin-left: 0.3rem;
+    padding-left: 0.3rem;
+  }
+  .img-logo2 {
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+  }
+  .footer {
+    display: inline-block;
+    height: 24vh;
+  }
+  footer h4 {
+    font-size: 1.2rem;
+    padding-top: 1.8rem;
+  }
+  footer a:link {
+    font-size: 1.2rem;
+  }
+  /* hakkımızda */
+  .sss-li {
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .h3-sss {
+    text-align: center left;
+    padding-left: 0.9rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  .takipet-li {
+    display: inline-block;
+    padding: 3.2rem 0.9rem;
+  }
+  .iletisim-footer {
+    padding-left: 0.4rem;
+  }
+  .iletisim {
+    display: flex;
+    text-align: left;
+    margin: 1rem 0.5rem;
+    padding-top: 2.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .img-logo1 {
+    width: 80px;
+    height: 80px;
+  }
+  .baslik {
+    font-size: 2.5rem;
+  }
+  #yonlendirme {
+    text-align: left;
+    padding-top: 0.9rem;
+  }
+  #kayitolma {
+    padding-top: 0.6rem;
+  }
+  header {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    width: 992px;
+  }
+
+  /* linklere genel tasarımı verme */
+  header a {
+    font-size: 1.4rem;
+  }
+  /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar.linkler arası boşluk bıraktırır */
+  .yonlendirme-li {
+    padding: 0.3rem;
+    display: inline-block;
+  }
+  /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar. linkler arası boşluk bıraktırır */
+  .kayitolma-li {
+    padding: 0.4rem 0.3rem;
+    display: inline-block;
+  }
+  #logo2-ul {
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .img-logo2 {
+    width: 95px;
+    height: 95px;
+    margin: 18px;
+  }
+  .footer {
+    display: inline-block;
+    height: 24vh;
+  }
+  footer h4 {
+    font-size: 1.5rem;
+    padding-top: 0rem;
+  }
+  footer a:link {
+    font-size: 1.5rem;
+  }
+  /* hakkımızda */
+  .sss-li {
+    display: block;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+  }
+
+  .h3-sss {
+    text-align: center left;
+    padding-left: 0.9rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .takipet-li {
+    display: inline-block;
+    padding: 4.2rem 0.9rem;
+  }
+  .iletisim-footer {
+    padding-left: 0.4rem;
+  }
+  .iletisim {
+    display: flex;
+    text-align: left;
+    margin: 1rem 0.5rem;
+    padding-top: 0rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .img-logo1 {
+    width: 85px;
+    height: 85px;
+  }
+  .baslik {
+    font-size: 3rem;
+  }
+  #yonlendirme {
+    text-align: left;
+    padding-top: 1.2rem;
+  }
+  #kayitolma {
+    padding-top: 0.9rem;
+  }
+  header {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    width: 1200px;
+  }
+
+  /* linklere genel tasarımı verme */
+  header a {
+    font-size: 1.8rem;
+  }
+  /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar.linkler arası boşluk bıraktırır */
+  .yonlendirme-li {
+    padding: 0.3rem;
+    display: inline-block;
+  }
+  /* sayfa kuculduğunde yazılar arasındaki dengeyi sağlar. linkler arası boşluk bıraktırır */
+  .kayitolma-li {
+    padding: 0.4rem 0.5rem;
+    display: inline-block;
+  }
+  #logo2-ul {
+    margin-left: 1.7rem;
+    padding-left: 1.7rem;
+  }
+  .img-logo2 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+  .footer {
+    display: inline-block;
+    height: 28vh;
+  }
+  footer h4 {
+    font-size: 1.8rem;
+    padding-top: 0rem;
+  }
+  footer a:link {
+    font-size: 1.8rem;
+  }
+  /* hakkımızda */
+  .sss-li {
+    display: block;
+    padding: 0.8rem;
+    font-size: 1.8rem;
+  }
+
+  .h3-sss {
+    text-align: center left;
+    padding-left: 0.9rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .takipet-li {
+    display: inline-block;
+    padding: 4.2rem 0.9rem;
+  }
+  .iletisim-footer {
+    padding-left: 0.4rem;
+  }
+  .iletisim {
+    display: flex;
+    text-align: left;
+    margin: 1rem 0.5rem;
+    padding-top: 0rem;
+    font-size: 1.7rem;
+  }
 }
