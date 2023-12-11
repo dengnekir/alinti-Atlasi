@@ -7,7 +7,7 @@
       type="image/x-icon"
     />
     <!-- css link -->
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="../header-footer.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>İletişim</title>
@@ -33,6 +33,11 @@
       body {
         background-image: linear-gradient(#fff, #bfbfbf);
         font-size: 62.5%;
+        height: 100%;
+      }
+      .main-ana {
+        margin-top: 10rem;
+        height: 100%;
       }
       h4 {
         font-size: 1.5rem;
@@ -63,7 +68,11 @@
       .column {
         display: inline-block;
       }
-      @media (max-width: 768px) {
+
+      @media (max-width: 679px) {
+        body {
+          height: 70vh;
+        }
         h4 {
           font-size: 0.8rem;
         }
@@ -75,9 +84,48 @@
         }
         .column-img {
           margin-left: 4rem;
+          height: 30%;
+          width: 30%;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+        iframe {
+          display: none;
         }
       }
-      @media (min-width: 769px) and (max-width: 1300px) {
+      @media (min-width: 680px) and (max-width: 799px) {
+        body {
+          height: 70vh;
+        }
+        h4 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        .row {
+          margin: 3rem 5rem;
+        }
+        .column-img {
+          margin-left: 4rem;
+          height: 30%;
+          width: 30%;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+        iframe {
+          width: 230px;
+          height: 250px;
+        }
+      }
+      @media (min-width: 800px) and (max-width: 1094px) {
+        iframe {
+          display: none;
+        }
+      }
+      @media (min-width: 1095px) and (max-width: 1300px) {
         h4 {
           font-size: 1.2rem;
         }
@@ -88,13 +136,21 @@
           margin: 6rem 10rem;
         }
         .column-img {
+          height: 30%;
+          width: 30%;
           margin-left: 4rem;
+        }
+        iframe {
+          width: 330px;
+          height: 350px;
         }
       }
     </style>
   </head>
   <body>
     <header class="header">
+      <button id="menuButton">&#9776;</button>
+
       <table class="table">
         <tr>
           <td id="img-logo">
@@ -198,7 +254,15 @@
           </div>
         </div>
         <div class="column">
-          <img class="column-img" src="../img/iletisim.png" alt="iletisim" />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.0987880260254!2d29.043726476161524!3d41.0230946185122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac95852bdb159%3A0x95cfc23eec7cdc7a!2zxLBzdGFuYnVsIFRvcGthcMSxIMOcbml2ZXJzaXRlc2kgQWx0dW5pemFkZSBrYW1ww7xzw7w!5e0!3m2!1str!2str!4v1702310055588!5m2!1str!2str"
+            width="450"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
     </main>
@@ -272,5 +336,56 @@
         </div>
       </div>
     </footer>
+    <script>
+      /// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
+      var menuButton = document.getElementById("menuButton");
+      var menuOpen = false;
+
+      // Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
+      function checkScreenWidth() {
+        var screenWidth = window.innerWidth;
+
+        // 768px altında ise
+        if (screenWidth <= 768) {
+          // Menüyü gizle
+          document.getElementById("yonlendirme").style.display = "none";
+          document.getElementById("kayitolma").style.display = "none";
+          // İkona tıklandığında menüyü göster
+          menuButton.style.display = "block";
+        } else {
+          // 768px üstünde ise
+          // Menüyü göster
+          document.getElementById("yonlendirme").style.display = "block";
+          document.getElementById("kayitolma").style.display = "block";
+          // İkona tıklandığında menüyü gösterme
+          menuButton.style.display = "none";
+        }
+      }
+
+      // Menüyü kontrol et
+      checkScreenWidth();
+
+      // Ekran genişliği değiştiğinde kontrol et
+      window.addEventListener("resize", function () {
+        checkScreenWidth();
+      });
+
+      // Menü butonuna tıklanınca
+      menuButton.addEventListener("click", function () {
+        // Menüyü aç/kapat
+        if (menuOpen) {
+          // Menü açıksa, kapat
+          document.getElementById("yonlendirme").style.display = "none";
+          document.getElementById("kayitolma").style.display = "none";
+        } else {
+          // Menü kapalıysa, aç
+          document.getElementById("yonlendirme").style.display = "block";
+          document.getElementById("kayitolma").style.display = "block";
+        }
+
+        // Menü durumunu güncelle
+        menuOpen = !menuOpen;
+      });
+    </script>
   </body>
 </html>

@@ -17,28 +17,32 @@
   </head>
   <body>
     <header class="header">
+      <button id="menuButton">&#9776;</button>
+
       <table class="table">
         <tr>
           <td id="img-logo">
             <!-- logo ana sayfa -->
-            <a class="img-logo" href="homepage.html">
+            <a class="img-logo" href="index.html.html">
               <img
                 class="img-logo1"
                 src="img/alıntıatlası.png"
                 alt="Logo"
-               width="90px";
-               height="90px";
+                width="90px"
+                ;
+                height="90px"
+                ;
             /></a>
           </td>
           <td>
-            <h1 class="baslik" >Alıntı Atlası</h1>
+            <h1 class="baslik">Alıntı Atlası</h1>
           </td>
           <td>
             <nav id="yonlendirme">
               <!-- yonlendirilme yerleri -->
               <ul class="yonlendirme-ul">
                 <li class="yonlendirme-li">
-                  <a class="kesfet" href="#bolum2">Keşfet</a>
+                  <a class="kesfet" href="index.html.html #bolum2">Keşfet</a>
                 </li>
                 <li class="yonlendirme-li">
                   <a class="hakkimizda" href="#footer">Hakkımızda</a>
@@ -77,7 +81,7 @@
         </tr>
       </table>
     </header>
-
+   
     <div class="div-ana">
       <main class="bolum-ana">
         <section class="bolum1" id="bolum1"></section>
@@ -271,7 +275,45 @@
           </div>
         </section>
         <section class="bolum5"></section>
-        <article class="bolum6">
+        <div id="kapsayici" onMouseOver="dur()" onMouseOut="basla()">     
+          <div class="resim aktif2">
+            <a href="#" target="_blank">
+              <img src="https://listelist.com/wp-content/uploads/2016/02/Naz%C4%B1m-Hikmet-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="resim">
+            <a href="#" target="_blank">
+              <img src="https://listelist.com/wp-content/uploads/2016/02/turgut-uyar-2-1.jpg" alt=""></a>
+          </div>
+          <div class="resim">
+            <a href="#" target="_blank">
+              <img src="https://listelist.com/wp-content/uploads/2016/02/ahmet-arif-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="resim">
+            <a href="#" target="_blank">
+              <img src="https://listelist.com/wp-content/uploads/2016/02/Cemal-Safi-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="resim">
+            <a href="#" target="_blank">
+              <img src="https://listelist.com/wp-content/uploads/2016/02/Can-Du%CC%88ndar-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="resim">
+            <a href="#" target="_blank">
+              <img src="https://listelist.com/wp-content/uploads/2016/02/Sezai-Karakoc%CC%A7-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="resim">
+            <a href="#" target="_blank">
+              <img src="https://listelist.com/wp-content/uploads/2016/02/Cemal-Safi-1.jpg" alt="">
+            </a>
+          </div>
+          <div class="ileri" onClick="ileri()"><i class="fa-solid fa-hand-point-right"></i></div>
+          <div class="geri" onClick="geri()"><i class="fa-regular fa-hand-point-left"></i></div>
+        </div>
+        <section class="bolum6">
           <h2>Kelimelerin Oyunu</h2>
           <p class="bolum6-p">Kelimelerin oyunu, hem okuma tutkunlarına hem de yazma aşığı olanlara hitap eder. Burada, her bir harf bir renk, her bir cümle bir melodi, her bir sayfa yeni bir maceradır. Kelimelerin büyüsüne kapılarak, dilin melodisine kulak verin ve her satırda yatan derin anlamları hissedin.</p>
           <div class="row">
@@ -309,17 +351,17 @@
               </p>
             </div>
           </div>
-        </article>
+        </section>     
       </main>
-    </div>
-
+      </div>
+      
     <footer id="footer">
       <div class="footer-genel">
         <div class="footer">
           <ul id="logo2-ul">
             <li id="logo2">
               <!-- logo footer sayfa -->
-              <a class="img-logo" href="homepage.html">
+              <a class="img-logo" href="index.html.html">
                 <img
                   class="img-logo2"
                   src="img/fuuter.png"
@@ -378,5 +420,94 @@
         </div>
       </div>
     </footer>
+
+    <script>
+/// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
+var menuButton = document.getElementById('menuButton');
+var menuOpen = false;
+
+// Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
+function checkScreenWidth() {
+  var screenWidth = window.innerWidth;
+
+  // 768px altında ise
+  if (screenWidth <= 768) {
+    // Menüyü gizle
+    document.getElementById('yonlendirme').style.display = 'none';
+    document.getElementById('kayitolma').style.display = 'none';
+    // İkona tıklandığında menüyü göster
+    menuButton.style.display = 'block';
+  } else {
+    // 768px üstünde ise
+    // Menüyü göster
+    document.getElementById('yonlendirme').style.display = 'block';
+    document.getElementById('kayitolma').style.display = 'block';
+    // İkona tıklandığında menüyü gösterme
+    menuButton.style.display = 'none';
+  }
+}
+
+// Menüyü kontrol et
+checkScreenWidth();
+
+// Ekran genişliği değiştiğinde kontrol et
+window.addEventListener('resize', function() {
+  checkScreenWidth();
+});
+
+// Menü butonuna tıklanınca
+menuButton.addEventListener('click', function() {
+  // Menüyü aç/kapat
+  if (menuOpen) {
+    // Menü açıksa, kapat
+    document.getElementById('yonlendirme').style.display = 'none';
+    document.getElementById('kayitolma').style.display = 'none';
+  } else {
+    // Menü kapalıysa, aç
+    document.getElementById('yonlendirme').style.display = 'block';
+    document.getElementById('kayitolma').style.display = 'block';
+  }
+
+  // Menü durumunu güncelle
+  menuOpen = !menuOpen;
+});
+
+
+var resim = document.getElementsByClassName("resim");
+var kutucuk = document.getElementsByTagName("li")
+var index = 0;
+galeri();
+basla();
+function galeri() {
+    if (index >= resim.length) {
+        index = 0;
+    }
+    else if (index < 0) {
+        index = resim.length - 1;
+    }
+    for (i = 0; i < resim.length; i++) {
+        resim[i].classList.remove("aktif2");//ilgili nesneden bir tane silmek için kullanılır
+        kutucuk[i].classList.remove("aktiflist");
+    }
+    resim[index].classList.add("aktif2");//aktif olan indisi ekranda göstermek için kullanılır
+    kutucuk[index].classList.add("aktiflist");
+}
+
+function ileri(){
+    
+    index++;
+    galeri();
+}
+function geri(){
+    index--;
+    galeri();
+}
+function dur(){
+    clearInterval(sure);
+}
+function basla() {
+    sure = setInterval(ileri, 4000);
+}
+    </script>
   </body>
 </html>

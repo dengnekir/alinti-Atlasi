@@ -4,7 +4,7 @@
     <!-- ikon -->
     <link rel="shortcut icon" href="../img/alıntıatlası.png" type="image/x-icon">
     <!-- css -->
-    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="../header-footer.css" />
         <!-- icon kütüphanesi -->
         <link
         rel="stylesheet"
@@ -61,6 +61,88 @@
       h3,h4{
         font-size: 1.6rem;
       }
+      /* slayt */
+#kapsayici {
+  padding-top: 3rem;
+  width: 80%;
+
+  position: relative;
+  margin: auto;
+
+  .resim {
+    width: 100%;
+    display: none;
+    overflow: hidden; /* Eklediğimiz stil */
+  }
+
+  img {
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+    max-height: 70vh; /* Resmin oranlarını korumak için */
+  }
+
+  .ileri,
+  .geri {
+    position: absolute;
+    background: #fff;
+    opacity: 0.8;
+    font-size: 1.9rem;
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+    top: 48%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  .ileri:hover,
+  .geri:hover {
+    color: white;
+    background-color: #020202;
+    opacity: 1;
+  }
+
+  .ileri {
+    right: 1rem;
+  }
+
+  .geri {
+    left: 1rem;
+  }
+
+  .aktif2 {
+    display: block;
+    animation: fade 0.7s ease;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  ul {
+    position: relative;
+    bottom: 3rem;
+    right: 2.5rem;
+    list-style: none;
+    text-align: center;
+  }
+
+  ul li {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #000000;
+    display: inline-block;
+  }
+  .aktiflist {
+    background: #7debe6;
+  }
+}
       @media (max-width: 576px) {
       h1{
         text-align: center;
@@ -115,6 +197,8 @@
   </head>
   <body>
     <header class="header" id="header">
+      <button id="menuButton">&#9776;</button>
+
       <table class="table">
         <tr>
           <td id="img-logo">
@@ -182,6 +266,46 @@
         Kitap alıntılarından oluşan bir koleksiyon. Edebiyatın derinliklerine
         dalıyoruz.
       </p>
+      <div id="kapsayici" onMouseOver="dur()" onMouseOut="basla()">     
+        <div class="resim aktif2">
+          <a href="#" target="_blank">
+            <img src="https://cdn.yemek.com/uploads/2015/02/albert-camus-kahve-sozu.jpg" alt="">
+          </a>
+        </div>
+        <div class="resim">
+          <a href="#" target="_blank">
+            <img src="https://cdn.yemek.com/uploads/2015/02/t-s-eliot-kahve-sozu.jpg" alt=""></a>
+        </div>
+        <div class="resim">
+          <a href="#" target="_blank">
+            <img src="https://cdn.yemek.com/uploads/2015/02/jim-carrey-kahve-sozu.jpg" alt="">
+          </a>
+        </div>
+        <div class="resim">
+          <a href="#" target="_blank">
+            <img src="https://i.pinimg.com/originals/70/29/74/70297427e061b3a2293688a5ba466003.jpg" alt="">
+          </a>
+        </div>
+        <div class="resim">
+          <a href="#" target="_blank">
+            <img src="https://kahveevreni.files.wordpress.com/2020/05/bill-cosby-kahve-sozu.jpg?w=900" alt="">
+          </a>
+        </div>
+        <div class="resim">
+          <a href="#" target="_blank">
+            <img src="https://i.pinimg.com/736x/e5/54/0b/e5540b782c5fa2e7b2998cfe62269d75.jpg" alt="">
+          </a>
+        </div>
+        <div class="resim">
+          <a href="#" target="_blank">
+            <img src="https://image.milimaj.com/i/milliyet/75/0x0/602527e05542811458ea5309.jpg" alt="">
+          </a>
+        </div>
+        <div class="ileri" onClick="ileri()"><i class="fa-solid fa-hand-point-right"></i></div>
+        <div class="geri" onClick="geri()"><i class="fa-regular fa-hand-point-left"></i></div>
+      </div>
+    </div>
+
       <h1>Edebiyatın İncileri</h1>
 
       <p>
@@ -459,6 +583,7 @@
         </div>
       </section>
     </main>
+
     <footer id="footer">
       <div class="footer-genel">
         <div class="footer">
@@ -529,5 +654,94 @@
         </div>
       </div>
     </footer>
+
+   <script>
+/// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
+var menuButton = document.getElementById('menuButton');
+var menuOpen = false;
+
+// Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
+function checkScreenWidth() {
+  var screenWidth = window.innerWidth;
+
+  // 768px altında ise
+  if (screenWidth <= 768) {
+    // Menüyü gizle
+    document.getElementById('yonlendirme').style.display = 'none';
+    document.getElementById('kayitolma').style.display = 'none';
+    // İkona tıklandığında menüyü göster
+    menuButton.style.display = 'block';
+  } else {
+    // 768px üstünde ise
+    // Menüyü göster
+    document.getElementById('yonlendirme').style.display = 'block';
+    document.getElementById('kayitolma').style.display = 'block';
+    // İkona tıklandığında menüyü gösterme
+    menuButton.style.display = 'none';
+  }
+}
+
+// Menüyü kontrol et
+checkScreenWidth();
+
+// Ekran genişliği değiştiğinde kontrol et
+window.addEventListener('resize', function() {
+  checkScreenWidth();
+});
+
+// Menü butonuna tıklanınca
+menuButton.addEventListener('click', function() {
+  // Menüyü aç/kapat
+  if (menuOpen) {
+    // Menü açıksa, kapat
+    document.getElementById('yonlendirme').style.display = 'none';
+    document.getElementById('kayitolma').style.display = 'none';
+  } else {
+    // Menü kapalıysa, aç
+    document.getElementById('yonlendirme').style.display = 'block';
+    document.getElementById('kayitolma').style.display = 'block';
+  }
+
+  // Menü durumunu güncelle
+  menuOpen = !menuOpen;
+});
+
+
+var resim = document.getElementsByClassName("resim");
+var kutucuk = document.getElementsByTagName("li")
+var index = 0;
+galeri();
+basla();
+function galeri() {
+    if (index >= resim.length) {
+        index = 0;
+    }
+    else if (index < 0) {
+        index = resim.length - 1;
+    }
+    for (i = 0; i < resim.length; i++) {
+        resim[i].classList.remove("aktif2");//ilgili nesneden bir tane silmek için kullanılır
+        kutucuk[i].classList.remove("aktiflist");
+    }
+    resim[index].classList.add("aktif2");//aktif olan indisi ekranda göstermek için kullanılır
+    kutucuk[index].classList.add("aktiflist");
+}
+
+function ileri(){
+    
+    index++;
+    galeri();
+}
+function geri(){
+    index--;
+    galeri();
+}
+function dur(){
+    clearInterval(sure);
+}
+function basla() {
+    sure = setInterval(ileri, 4000);
+}
+    </script>
   </body>
 </html>

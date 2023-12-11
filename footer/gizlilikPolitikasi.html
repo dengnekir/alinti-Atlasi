@@ -6,7 +6,7 @@
       href="../img/alıntıatlası.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="../header-footer.css" />
     <link
       rel="shortcut icon"
       href="../img/alıntıatlası.png"
@@ -57,17 +57,20 @@
         text-align: center;
       }
       @media (max-width: 768px) {
-        p {
+        .h3-p {
           font-size: 1.5rem;
+        }
+        p {
+          font-size: 1rem;
         }
         .main-ana {
           margin: 12rem 15rem;
         }
         p::first-letter {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
         #h1 {
-          font-size: 3rem;
+          font-size: 1.5rem;
         }
       }
       @media (min-width: 769px) and (max-width: 1500px) {
@@ -89,6 +92,8 @@
 
   <body>
     <header class="header">
+      <button id="menuButton">&#9776;</button>
+
       <table class="table">
         <tr>
           <td id="img-logo">
@@ -280,5 +285,57 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      /// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
+      var menuButton = document.getElementById("menuButton");
+      var menuOpen = false;
+
+      // Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
+      function checkScreenWidth() {
+        var screenWidth = window.innerWidth;
+
+        // 768px altında ise
+        if (screenWidth <= 768) {
+          // Menüyü gizle
+          document.getElementById("yonlendirme").style.display = "none";
+          document.getElementById("kayitolma").style.display = "none";
+          // İkona tıklandığında menüyü göster
+          menuButton.style.display = "block";
+        } else {
+          // 768px üstünde ise
+          // Menüyü göster
+          document.getElementById("yonlendirme").style.display = "block";
+          document.getElementById("kayitolma").style.display = "block";
+          // İkona tıklandığında menüyü gösterme
+          menuButton.style.display = "none";
+        }
+      }
+
+      // Menüyü kontrol et
+      checkScreenWidth();
+
+      // Ekran genişliği değiştiğinde kontrol et
+      window.addEventListener("resize", function () {
+        checkScreenWidth();
+      });
+
+      // Menü butonuna tıklanınca
+      menuButton.addEventListener("click", function () {
+        // Menüyü aç/kapat
+        if (menuOpen) {
+          // Menü açıksa, kapat
+          document.getElementById("yonlendirme").style.display = "none";
+          document.getElementById("kayitolma").style.display = "none";
+        } else {
+          // Menü kapalıysa, aç
+          document.getElementById("yonlendirme").style.display = "block";
+          document.getElementById("kayitolma").style.display = "block";
+        }
+
+        // Menü durumunu güncelle
+        menuOpen = !menuOpen;
+      });
+    </script>
   </body>
 </html>

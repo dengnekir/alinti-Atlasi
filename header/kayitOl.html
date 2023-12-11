@@ -7,7 +7,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <!-- css -->
-    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="../header-footer.css" />
     <!-- document icon -->
     <link
       rel="shortcut icon"
@@ -73,8 +73,8 @@
     }
     button {
       color: #000;
-      padding: 0.4rem 2rem;
-      border-radius: 2rem;
+      padding: 0.9 1.8rem;
+      border-radius: 1.5rem;
       margin: 2rem 0rem 5rem 1.3rem;
     }
     button:hover {
@@ -114,6 +114,10 @@
       color: white;
     }
     @media (max-width: 576px) {
+      button {
+        padding: 1px;
+        margin-bottom: 2rem;
+      }
       h1 {
         font-size: 1.5rem;
       }
@@ -136,6 +140,10 @@
       }
     }
     @media (min-width: 577px) and (max-width: 992px) {
+      button {
+        padding: 1px;
+        margin: 0;
+      }
       .h1 {
         font-size: 2rem;
       }
@@ -160,6 +168,7 @@
   </style>
   <body>
     <header class="header">
+      <button id="menuButton">&#9776;</button>
       <table class="table">
         <tr>
           <td id="img-logo">
@@ -228,7 +237,7 @@
         <div class="giris-h1">
           <h1>Kayıt OL</h1>
         </div>
-        <form action="../index.html.html">
+        <form action="https://formspree.io/f/{form_id}" method="post">
           <div class="ana-form">
             <div class="genel">
               <div class="bilgiler">
@@ -253,7 +262,7 @@
                 <h3>Telefon Numaranız</h3>
               </div>
               <div class="bilgiler">
-                <input type="number" id="number" />
+                <input type="tel" id="number" />
               </div>
               <div class="bilgiler">
                 <h3>Şifreniz</h3>
@@ -364,5 +373,57 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      /// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
+      var menuButton = document.getElementById("menuButton");
+      var menuOpen = false;
+
+      // Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
+      function checkScreenWidth() {
+        var screenWidth = window.innerWidth;
+
+        // 768px altında ise
+        if (screenWidth <= 768) {
+          // Menüyü gizle
+          document.getElementById("yonlendirme").style.display = "none";
+          document.getElementById("kayitolma").style.display = "none";
+          // İkona tıklandığında menüyü göster
+          menuButton.style.display = "block";
+        } else {
+          // 768px üstünde ise
+          // Menüyü göster
+          document.getElementById("yonlendirme").style.display = "block";
+          document.getElementById("kayitolma").style.display = "block";
+          // İkona tıklandığında menüyü gösterme
+          menuButton.style.display = "none";
+        }
+      }
+
+      // Menüyü kontrol et
+      checkScreenWidth();
+
+      // Ekran genişliği değiştiğinde kontrol et
+      window.addEventListener("resize", function () {
+        checkScreenWidth();
+      });
+
+      // Menü butonuna tıklanınca
+      menuButton.addEventListener("click", function () {
+        // Menüyü aç/kapat
+        if (menuOpen) {
+          // Menü açıksa, kapat
+          document.getElementById("yonlendirme").style.display = "none";
+          document.getElementById("kayitolma").style.display = "none";
+        } else {
+          // Menü kapalıysa, aç
+          document.getElementById("yonlendirme").style.display = "block";
+          document.getElementById("kayitolma").style.display = "block";
+        }
+
+        // Menü durumunu güncelle
+        menuOpen = !menuOpen;
+      });
+    </script>
   </body>
 </html>

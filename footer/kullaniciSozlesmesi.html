@@ -7,7 +7,7 @@
       type="image/x-icon"
     />
     <!-- css link -->
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="../header-footer.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kullanıcı Sözleşmesi</title>
@@ -28,6 +28,7 @@
       body {
         background-image: linear-gradient(#fff, #bfbfbf);
         font-size: 62.5%;
+        height: 100%;
       }
       h1 {
         text-align: center;
@@ -41,9 +42,13 @@
         font-family: "Edu TAS Beginner", cursive;
       }
       .main {
+        height: 60vh;
         padding: 5rem 10rem;
       }
       @media (max-width: 399px) {
+        body {
+          height: 100vh;
+        }
         .main-ana {
           margin: 4rem 1rem;
           display: flex;
@@ -61,11 +66,12 @@
 
       @media (min-width: 400px) and (max-width: 768px) {
         .main-ana {
+          height: 60vh;
           margin: 8rem 1rem;
           display: flex;
         }
         p {
-          font-size: 1rem;
+          font-size: 1.3rem;
         }
         p::first-letter {
           font-size: 1.5rem;
@@ -73,6 +79,7 @@
       }
       @media (min-width: 769px) and (max-width: 939px) {
         .main-ana {
+          height: 100vh;
           margin: 10rem 8rem;
           display: flex;
         }
@@ -88,6 +95,7 @@
       }
       @media (min-width: 940px) and (max-width: 1500px) {
         .main-ana {
+          height: 90vh;
           margin: 8rem 5rem;
           display: flex;
         }
@@ -105,6 +113,8 @@
   </head>
   <body>
     <header class="header">
+      <button id="menuButton">&#9776;</button>
+
       <table class="table">
         <tr>
           <td id="img-logo">
@@ -267,5 +277,57 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      /// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
+      var menuButton = document.getElementById("menuButton");
+      var menuOpen = false;
+
+      // Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
+      function checkScreenWidth() {
+        var screenWidth = window.innerWidth;
+
+        // 768px altında ise
+        if (screenWidth <= 768) {
+          // Menüyü gizle
+          document.getElementById("yonlendirme").style.display = "none";
+          document.getElementById("kayitolma").style.display = "none";
+          // İkona tıklandığında menüyü göster
+          menuButton.style.display = "block";
+        } else {
+          // 768px üstünde ise
+          // Menüyü göster
+          document.getElementById("yonlendirme").style.display = "block";
+          document.getElementById("kayitolma").style.display = "block";
+          // İkona tıklandığında menüyü gösterme
+          menuButton.style.display = "none";
+        }
+      }
+
+      // Menüyü kontrol et
+      checkScreenWidth();
+
+      // Ekran genişliği değiştiğinde kontrol et
+      window.addEventListener("resize", function () {
+        checkScreenWidth();
+      });
+
+      // Menü butonuna tıklanınca
+      menuButton.addEventListener("click", function () {
+        // Menüyü aç/kapat
+        if (menuOpen) {
+          // Menü açıksa, kapat
+          document.getElementById("yonlendirme").style.display = "none";
+          document.getElementById("kayitolma").style.display = "none";
+        } else {
+          // Menü kapalıysa, aç
+          document.getElementById("yonlendirme").style.display = "block";
+          document.getElementById("kayitolma").style.display = "block";
+        }
+
+        // Menü durumunu güncelle
+        menuOpen = !menuOpen;
+      });
+    </script>
   </body>
 </html>
