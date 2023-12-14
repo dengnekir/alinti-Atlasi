@@ -34,24 +34,30 @@
         font-size: 45px;
       }
       h1 {
+        margin-top: 20rem;
+        font-size: 5rem;
         text-align: center;
       }
 
       p {
         text-align: center;
-        font-size: 20px;
+        font-size: 2rem;
+        margin: 2rem 4rem;
         font-family: "Edu TAS Beginner", cursive;
       }
       @media (max-width: 768px) {
         main {
           height: 55vh;
         }
-
+        h1 {
+          margin-top: 20rem;
+          font-size: 3rem;
+        }
         p {
-          font-size: 1rem;
+          font-size: 1.4rem;
         }
         .main-ana {
-          margin: 12rem 15rem;
+          margin: 12rem 1rem;
         }
         p::first-letter {
           font-size: 1.5rem;
@@ -59,7 +65,7 @@
       }
       @media (min-width: 769px) and (max-width: 1500px) {
         .main-ana {
-          margin: 15rem 25rem;
+          height: 89vh;
           display: flex;
         }
         p {
@@ -69,80 +75,45 @@
           font-size: 4.5rem;
         }
         #h1 {
-          font-size: 3rem;
+          margin-top: 17rem;
+          font-size: 5rem;
         }
       }
     </style>
   </head>
   <body>
-    <header class="header">
-      <button id="menuButton">&#9776;</button>
-
-      <table class="table">
-        <tr>
-          <td id="img-logo">
-            <!-- logo ana sayfa -->
-            <a class="img-logo" href="../index.html.html">
-              <img
-                class="img-logo1"
-                src="../img/alıntıatlası.png"
-                alt="Logo"
-                width="90px"
-                ;
-                height="90px"
-                ;
-            /></a>
-          </td>
-          <td>
-            <h1 class="baslik" style="color: rgb(22, 13, 0)">Alıntı Atlası</h1>
-          </td>
-          <td>
-            <nav id="yonlendirme">
-              <!-- yonlendirilme yerleri -->
-              <ul class="yonlendirme-ul">
-                <li class="yonlendirme-li">
-                  <a class="kesfet" href="../index.html.html #bolum2  "
-                    >Keşfet</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="alintivesoz" href="../header/alintilarVeSozler.html"
-                    >Alıntılar ve Sözler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="yazarvesair" href="../header/yazarVeSairler.html"
-                    >Yazarlar ve Şairler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a
-                    class="kitapZirvesi"
-                    href="../header/klasikKitapZirvesi.html"
-                    >Kitap Zirvesi</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </td>
-          <td>
-            <nav id="kayitolma">
-              <!-- kayıt olma kısmı -->
-              <ul class="kayitolma-ul">
-                <li class="kayitolma-li">
-                  <a href="../header/kayitOl.html">Kayıt Ol</a>
-                </li>
-                <li class="kayitolma-li">
-                  <a href="../header/girisYap.html">Giriş Yap</a>
-                </li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-      </table>
+    <header>
+      <div class="row">
+        <div class="col col-1">
+          <a href="../index.html.html">
+            <img class="logo" src="../img/alıntıatlası.png" alt=""
+          /></a>
+          <div class="col col-2">
+            <h1 class="head">Alıntı Atlası</h1>
+          </div>
+        </div>
+        <div class="col col-4">
+          <ul class="kayitol" id="kayitol">
+            <a href="../header/kayitOl.html"><li>Kayıt ol</li></a>
+            <a href="../header/girisYap.html"> <li>Giriş Yap</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="col col-3">
+          <ul class="item">
+            <a href="../index.html.html #bolum2"> <li>Keşfet</li></a>
+            <a class="hakkimizda" href="#footer"><li>Hakkımızda</li></a>
+            <a href="../header/alintilarVeSozler.html">Alıntılar ve Sözler</a>
+            <a href="../header/yazarVeSairler.html">
+              <li>Yazarlar ve Şairler</li></a
+            >
+            <a href="../header/klasikKitapZirvesi.html">
+              <li>Kitap Zirvesi</li></a
+            >
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main class="main-ana">
@@ -256,57 +227,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      /// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
-      var menuButton = document.getElementById("menuButton");
-      var menuOpen = false;
-
-      // Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
-      function checkScreenWidth() {
-        var screenWidth = window.innerWidth;
-
-        // 768px altında ise
-        if (screenWidth <= 768) {
-          // Menüyü gizle
-          document.getElementById("yonlendirme").style.display = "none";
-          document.getElementById("kayitolma").style.display = "none";
-          // İkona tıklandığında menüyü göster
-          menuButton.style.display = "block";
-        } else {
-          // 768px üstünde ise
-          // Menüyü göster
-          document.getElementById("yonlendirme").style.display = "block";
-          document.getElementById("kayitolma").style.display = "block";
-          // İkona tıklandığında menüyü gösterme
-          menuButton.style.display = "none";
-        }
-      }
-
-      // Menüyü kontrol et
-      checkScreenWidth();
-
-      // Ekran genişliği değiştiğinde kontrol et
-      window.addEventListener("resize", function () {
-        checkScreenWidth();
-      });
-
-      // Menü butonuna tıklanınca
-      menuButton.addEventListener("click", function () {
-        // Menüyü aç/kapat
-        if (menuOpen) {
-          // Menü açıksa, kapat
-          document.getElementById("yonlendirme").style.display = "none";
-          document.getElementById("kayitolma").style.display = "none";
-        } else {
-          // Menü kapalıysa, aç
-          document.getElementById("yonlendirme").style.display = "block";
-          document.getElementById("kayitolma").style.display = "block";
-        }
-
-        // Menü durumunu güncelle
-        menuOpen = !menuOpen;
-      });
-    </script>
   </body>
 </html>

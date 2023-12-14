@@ -32,7 +32,7 @@
         padding: 1rem 8rem;
       }
       .input {
-        margin-top: 15rem;
+        margin-top: 20rem;
         text-align: center;
       }
       #input:focus {
@@ -40,29 +40,28 @@
         background-color: #dfd7d7;
       }
       body {
+        margin: 0;
         font-size: 62.5%;
        
       }
-      .div-ana1 {
-        padding: 19vh 5vh 5vh 5vh;
-      }
+  
       .main-ana{
         
         background-image: linear-gradient(#fff, #d9d9d9);
       }
-      .row{
+      .row1{
         display: flex;
-        margin: 5rem 0rem;
-        margin-left: 4rem;
+        width: 100%;
+        justify-content: center;
       }
-      .row img {
+      .row1 img {
         border-radius: 3%;
         height: 30vh;
         width: 30vh;
         filter: grayscale(100%);
         
       }
-      .row img:hover{
+      .row1 img:hover{
         transform:translateY(-10px);
         transition: .5s;
         filter: grayscale(0%);      
@@ -71,7 +70,7 @@
       .column{
         margin: 3rem 3rem;
       }
-      h1{
+      .h1{
         font-size: 5rem;
         text-align: center;
       }
@@ -86,29 +85,17 @@
       #input {
         padding: 1rem 4rem;
       }
-      .input {
-        margin-top: 15rem;
-      }
-        .div-ana1 {
-        margin: 1vh 3vh 2vh 3vh;
-      
-      }
-      .row{
-        display: flex;
-        margin: 1rem 0rem;
-      }
-      .row img {
+  
+      .row1 img {
         height: 10vh;
         width: 10vh;
       }
-      .row img:hover{
+      .row1 img:hover{
         transform:translateY(-4px);
         transition: .5s;
       }
-      .column{
-        margin: .5rem .5rem;
-      }
-      h1{
+      
+      .h1{
         font-size: 2rem;
         text-align: center;
       }
@@ -130,22 +117,22 @@
         .div-ana1 {
         margin: 15vh 5vh 0vh 5vh;
       }
-      .row{
+      .row1{
         display: flex;
         margin: 1rem 0rem;
       }
-      .row img {
+      .row1 img{
         height: 15vh;
         width: 15vh;
       }
-      .row img:hover{
+      .row1 img:hover{
         transform:translateY(-4px);
         transition: .5s;
       }
       .column{
         margin: .5rem .5rem;
       }
-      h1{
+      .h1{
         font-size: 2rem;
         text-align: center;
       }
@@ -158,22 +145,22 @@
         .div-ana1 {
         margin: 15vh 7vh 0vh 7vh;
       }
-      .row{
+      .row1{
         display: flex;
         margin: 2rem 0rem;
       }
-      .row img {
+      .row1 img {
         height: 15vh;
         width: 15vh;
       }
-      .row img:hover{
+      .row1 img:hover{
         transform:translateY(-8px);
         transition: .5s;
       }
       .column{
         margin: 1rem 1rem;
       }
-      h1{
+      .h1{
         font-size: 3rem;
         text-align: center;
       }
@@ -186,22 +173,22 @@
         .div-ana1 {
         margin: 15vh 5vh 0vh 5vh;
       }
-      .row{
+      .row1{
         display: flex;
         margin: 4rem 0rem;
       }
-      .row img {
+      .row1 img {
         height: 20vh;
         width: 20vh;
       }
-      .row img:hover{
+      .row1 img:hover{
         transform:translateY(-9px);
         transition: .5s;
       }
       .column{
         margin: 2rem 2rem;
       }
-      h1{
+      .h1{
         font-size: 4rem;
         text-align: center;
       }
@@ -213,67 +200,34 @@
     </style>
   </head>
   <body>
-    <header class="header" id="header">
-      <button id="menuButton">&#9776;</button>
-      <table class="table">
-        <tr>
-          <td id="img-logo">
-            <!-- logo ana sayfa -->
-            <a class="img-logo" href="../index.html.html">
-              <img
-                class="img-logo1"
-                src="../img/alıntıatlası.png"
-                alt="Logo"
-                width="90px"
-                ;
-                height="90px"
-                ;
-            /></a>
-          </td>
-          <td>
-            <h1 class="baslik">Alıntı Atlası</h1>
-          </td>
-          <td>
-            <nav id="yonlendirme">
-              <!-- yonlendirilme yerleri -->
-              <ul class="yonlendirme-ul">
-                <li class="yonlendirme-li">
-                  <a class="kesfet" href="../index.html.html #bolum2">Keşfet</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="alintivesoz" href="alintilarVeSozler.html"
-                    >Alıntılar ve Sözler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="yazarvesair" href="#">Yazarlar ve Şairler</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="kitapZirvesi" href="klasikKitapZirvesi.html"
-                    >Kitap Zirvesi</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </td>
-          <td>
-            <nav id="kayitolma">
-              <!-- kayıt olma kısmı -->
-              <ul class="kayitolma-ul">
-                <li class="kayitolma-li">
-                  <a href="kayitOl.html">Kayıt Ol</a>
-                </li>
-                <li class="kayitolma-li">
-                  <a href="girisYap.html">Giriş Yap</a>
-                </li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-      </table>
+    <header>
+      <div class="row">
+        <div class="col col-1">
+          <a href="../index.html.html">
+            <img class="logo" src="../img/alıntıatlası.png" alt=""
+          /></a>
+          <div class="col col-2">
+            <h1 class="head">Alıntı Atlası</h1>
+          </div>
+        </div>
+        <div class="col col-4">
+          <ul class="kayitol" id="kayitol">
+            <a href="kayitOl.html"><li>Kayıt ol</li></a>
+            <a href="girisYap.html"> <li>Giriş Yap</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="col col-3">
+          <ul class="item">
+            <a href="../index.html.html #bolum2"> <li>Keşfet</li></a>
+            <a class="hakkimizda" href="#footer"><li>Hakkımızda</li></a>
+            <a href="alintilarVeSozler.html">Alıntılar ve Sözler</a>
+            <a href="#"> <li>Yazarlar ve Şairler</li></a>
+            <a href="klasikKitapZirvesi.html"> <li>Kitap Zirvesi</li></a>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <div class="input">
@@ -285,9 +239,9 @@
     <main class="main-ana">
       <div class="div-ana1">
         <div >
-          <h1>Yazar ve Şairler</h1>
+          <h1 class="h1">Yazar ve Şairler</h1>
         </div class="div-ana1">
-        <div class="row">
+        <div class="row1">
           <div class="column">
             <h2>Nazım Hikmet</h2>
             <a href="#">
@@ -326,7 +280,7 @@
           </a>
           </div>
         </div>
-        <div class="row">
+        <div class="row1">
           <div class="column">
             <h2>Sabahattin Ali</h2>
             <a href="#">
@@ -364,7 +318,7 @@
           </a>
           </div>
         </div>
-        <div class="row">
+        <div class="row1">
           <div class="column">
             <h2>Ayşe Külin</h2>
             <a href="#">
@@ -402,7 +356,7 @@
           </a>
           </div>
         </div>
-        <div class="row">
+        <div class="row1">
           <div class="column">
             <h2>Mehmed Uzun</h2>
             <a href="#">
@@ -440,7 +394,7 @@
           </a>
           </div>
         </div>
-        <div class="row">
+        <div class="row1">
           <div class="column">
             <h2>Franz Kafka</h2>
             <a href="#">
@@ -478,7 +432,7 @@
           </a>
           </div>
         </div>
-        <div class="row">
+        <div class="row1">
           <div class="column">
             <h2>Turgut Uyar</h2>
             <a href="#">
@@ -585,58 +539,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      /// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
-      var menuButton = document.getElementById('menuButton');
-      var menuOpen = false;
-      
-      // Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
-      function checkScreenWidth() {
-        var screenWidth = window.innerWidth;
-      
-        // 768px altında ise
-        if (screenWidth <= 768) {
-          // Menüyü gizle
-          document.getElementById('yonlendirme').style.display = 'none';
-          document.getElementById('kayitolma').style.display = 'none';
-          // İkona tıklandığında menüyü göster
-          menuButton.style.display = 'block';
-        } else {
-          // 768px üstünde ise
-          // Menüyü göster
-          document.getElementById('yonlendirme').style.display = 'block';
-          document.getElementById('kayitolma').style.display = 'block';
-          // İkona tıklandığında menüyü gösterme
-          menuButton.style.display = 'none';
-        }
-      }
-      
-      // Menüyü kontrol et
-      checkScreenWidth();
-      
-      // Ekran genişliği değiştiğinde kontrol et
-      window.addEventListener('resize', function() {
-        checkScreenWidth();
-      });
-      
-      // Menü butonuna tıklanınca
-      menuButton.addEventListener('click', function() {
-        // Menüyü aç/kapat
-        if (menuOpen) {
-          // Menü açıksa, kapat
-          document.getElementById('yonlendirme').style.display = 'none';
-          document.getElementById('kayitolma').style.display = 'none';
-        } else {
-          // Menü kapalıysa, aç
-          document.getElementById('yonlendirme').style.display = 'block';
-          document.getElementById('kayitolma').style.display = 'block';
-        }
-      
-        // Menü durumunu güncelle
-        menuOpen = !menuOpen;
-      });
-      
-          </script>
   </body>
 </html>

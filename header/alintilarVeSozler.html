@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
   <head>
     <!-- ikon -->
     <link rel="shortcut icon" href="../img/alıntıatlası.png" type="image/x-icon">
@@ -16,7 +16,7 @@
     <style>
       body{
         font-size: 62.5%;
-        margin-top: 15rem;
+    margin: 0;
       }
       .main-ana{
         background-image: linear-gradient(#fff, #d9d9d9);
@@ -33,17 +33,17 @@
         padding-bottom: 5vh;
       }
      
-      .row {
+      .row1 {
         padding: 2.5rem;
         text-align: center;
       }
-      .column {
+      .column1 {
         display: inline-block;
         vertical-align: text-top;
         width: calc(25% - 4px);
         height: 60vh;
       }
-      .column h3 {
+      .column1 h3 {
         box-shadow: rgba(103, 99, 99, 0.56) 0.31rem 0.62rem 3.43rem 0rem;
         background-color:#9e9797;
       }
@@ -153,10 +153,10 @@
         padding-top:1vh;
         padding-bottom: 3vh;
       }
-      .row {
+      .row1 {
         padding: 1.5rem;
       }
-      .column {
+      .column1 {
         width: calc(25% - 4px);
         height: 40vh;
       }
@@ -178,10 +178,10 @@
         padding-top:1vh;
         padding-bottom: 4vh;
       }
-      .row {
+      .row1 {
         padding: 2rem;     
       }
-      .column {
+      .column1 {
         height: 50vh;
       }
       .imgyazar {
@@ -196,68 +196,32 @@
     </style>
   </head>
   <body>
-    <header class="header" id="header">
-      <button id="menuButton">&#9776;</button>
-
-      <table class="table">
-        <tr>
-          <td id="img-logo">
-            <!-- logo ana sayfa -->
-            <a class="img-logo" href="../index.html.html">
-              <img
-                class="img-logo1"
-                src="../img/alıntıatlası.png"
-                alt="Logo"
-                width="90px"
-                ;
-                height="90px"
-                ;
-            /></a>
-          </td>
-          <td>
-            <h1 class="baslik">Alıntı Atlası</h1>
-          </td>
-          <td>
-            <nav id="yonlendirme">
-              <!-- yonlendirilme yerleri -->
-              <ul class="yonlendirme-ul">
-                <li class="yonlendirme-li">
-                  <a class="kesfet" href="../index.html.html #bolum2">Keşfet</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="alintivesoz" href="#"
-                    >Alıntılar ve Sözler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="yazarvesair" href="yazarVeSairler.html"
-                    >Yazarlar ve Şairler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="kitapZirvesi" href="klasikKitapZirvesi.html">Kitap Zirvesi</a>
-                </li>
-              </ul>
-            </nav>
-          </td>
-          <td>
-            <nav id="kayitolma">
-              <!-- kayıt olma kısmı -->
-              <ul class="kayitolma-ul">
-                <li class="kayitolma-li">
-                  <a href="kayitOl.html">Kayıt Ol</a>
-                </li>
-                <li class="kayitolma-li">
-                  <a href="girisYap.html">Giriş Yap</a>
-                </li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-      </table>
+    <header>
+      <div class=" row">
+        <div class="col col-1">
+         <a href="../index.html.html"> <img class="logo"src="../img/alıntıatlası.png" alt=""></a>
+          <div class=" col col-2">
+            <h1 class="head">Alıntı Atlası</h1>
+          </div>
+        </div>
+        <div class="col col-4">
+          <ul class="kayitol" id="kayitol">
+            <a href="kayitOl.html"><li>Kayıt ol</li></a>
+           <a href="girisYap.html"> <li>Giriş Yap</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="col col-3">
+          <ul class="item" >
+           <a href="../index.html.html #bolum2"> <li>Keşfet</li></a>
+            <a class="hakkimizda" href="#footer"><li>Hakkımızda</li></a>
+            <a href="#">Alıntılar ve Sözler</a>
+           <a href="yazarVeSairler.html"> <li>Yazarlar ve Şairler</li></a>
+           <a href="klasikKitapZirvesi.html"> <li>Kitap Zirvesi</li></a>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main class="main-ana">
@@ -313,8 +277,8 @@
         güzel alıntıların sahipleri.
       </p>
       <section>
-        <div class="row" id="row">
-          <div class="column">
+        <div class="row1" id="row">
+          <div class="column1">
             <h3>Stefan Zweig</h3>
             <img
               class="imgyazar"
@@ -325,7 +289,7 @@
               Sen, beni asla, asla tanımayan, bir su birikintisinin yanından geçercesine yanımdan geçip giden, bir taşa basarcasına üstüme basan, hep, ama hep yoluna devam eden ve beni sonsuz bir bekleyiş içerisinde bırakan sen, kimsin ki benim için? <br> <h4 id="kitap-isim">Bilinmeyen Bir Kadının Mektubu</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Anton Çehov</h3>
             <img
               class="imgyazar"
@@ -337,7 +301,7 @@
               Nedir özlemin ağrısı, nedir hüzün, nedir yağ gibi erimek, zavallılaşmak ? Ben de cayır cayır yandım bir zamanlar. <br> <h4 id="kitap-isim">Tütünün Zararları</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Nazım Himet</h3>
             <img
               class="imgyazar"
@@ -350,7 +314,7 @@
               düşün. <br> <h4>Piraye'ye Mektuplar</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Doğan Cüceloğlu</h3>
             <img
               class="imgyazar"
@@ -363,8 +327,8 @@
             </p>
           </div>
         </div>
-        <div class="row" id="row">
-          <div class="column">
+        <div class="row1" id="row">
+          <div class="column1">
             <h3>Maksim Gorki</h3>
             <img
               class="imgyazar"
@@ -375,7 +339,7 @@
               Kendi kendinin patronu olmayı öğren, kimsenin etkisi altında kalma! Sessiz... sakin... ama inatla yaşa! Herkesi dinle, ama senin için en iyisi neyse, onu yap..." <br> <h4>Çocukluğum</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Cemal Süreya</h3>
             <img
               class="imgyazar"
@@ -389,7 +353,7 @@
               Sana benzer şiir olur..'' <br> <h4>Sevda Sözleri</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Artur Conan Doyle</h3>
             <img
               class="imgyazar"
@@ -404,8 +368,8 @@
         </div>
       </section>
       <section>
-        <div class="row" id="row">
-          <div class="column">
+        <div class="row1" id="row">
+          <div class="column1">
             <h3>Ahmed Arif</h3>
             <img
               class="imgyazar"
@@ -419,7 +383,7 @@
               can. <br> <h4 id="kitap-isim">Suskun</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Can Yücel</h3>
             <img
               class="imgyazar"
@@ -434,7 +398,7 @@
               İçim parçalandı arada. <br> <h4 id="kitap-isim">Sevgi Duvarı</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Reşat Nuri Gültekin</h3>
             <img
               class="imgyazar"
@@ -445,7 +409,7 @@
               Sevecek bir hakiki insan bulanlara şaşmak lazım... Çünkü onun bir hayalini bile bulmak o kadar güç, o kadar güç ki... <br> <h4>Çalıkuşu</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Orhan Veli Kanık</h3>
             <img
               class="imgyazar"
@@ -460,8 +424,8 @@
             </p>
           </div>
         </div>
-        <div class="row" id="row">
-          <div class="column">
+        <div class="row1" id="row">
+          <div class="column1">
             <h3>Mehmed Uzun</h3>
             <img
               class="imgyazar"
@@ -472,7 +436,7 @@
               Bir düşteymiş gibi kesik kesik konuşan kızın son sözleri karşısında tutamıyorum kendimi, <br> "Bak kar yağıyor," diyorum, <br> "Karın güzelliğine baksana..." <br> <h4>Aşk Gibi Aydınlık Ölüm Gibi Karanlık</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Murathan Mungan</h3>
             <img
               class="imgyazar"
@@ -483,7 +447,7 @@
               Zamanla yerleşir yaşadıkların, yeniden konumlanır, çoğalır anlamları, önemi kavranır. Bir zamanlar anlamadan yaşadığın şey, çok sonradan değerini kazanır. Yokluğu derin ve sürekli bir sızı halini alır. <br> <h4>Yaz Geçer</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>George Orwell</h3>
             <img
               class="imgyazar"
@@ -497,8 +461,8 @@
         </div>
       </section>
       <section>
-        <div class="row" id="row">
-          <div class="column">
+        <div class="row1" id="row">
+          <div class="column1">
             <h3>Marlo Morgan </h3>
             <img
               class="imgyazar"
@@ -509,7 +473,7 @@
               Tanrım, bana değiştiremeyeceğim şeyleri kabul etme gücü, değiştirebileceğim şeyleri değiştirme cesareti ve bu ikisi arasındaki farkı anlayabilme sağduyusu ver. <br> <h4 id="kitap-isim">Bir Çift Yürek</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Hikmet Anıl Öztekin</h3>
             <img
               class="imgyazar"
@@ -520,7 +484,7 @@
               Aslında O hep var da biz onu ancak en yalnız halimizle görebiliyoruz. Ancak aciz hissettiğimizde hatırlıyoruz. Bu sefer de güçleniyorsun. Çünkü öyle bir şey var ki yanında, öyle bir güç var ki... Biraz hüzünlensen, biraz dertlensen tutuyor elinden. <br> <h4 id="kitap-isim">Eyvallah 1</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Alexander Dumas</h3>
             <img
               class="imgyazar"
@@ -531,7 +495,7 @@
               "Tanrım, bunun açıklaması çok basit; iktidarı elinde tutan sizlerin elinde sadece paranın sağladığı olanaklar var; oysa iktidarı hedefleyen bizlerin elinde bağlılığın araçları var."<br> <h4>Monte Cristo Kontu (2 Cilt Takım)</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Stephan King</h3>
             <img
               class="imgyazar"
@@ -544,8 +508,8 @@
             </p>
           </div>
         </div>
-        <div class="row" id="row">
-          <div class="column">
+        <div class="row1" id="row">
+          <div class="column1">
             <h3>Frida Kahlo</h3>
             <img
               class="imgyazar"
@@ -558,7 +522,7 @@
               kaç kalp ağrısı ettiğini bilemezsiniz... <br> <h4>Hissettiğin Kadar Yalnızsın</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Ahmet Batman </h3>
             <img
               class="imgyazar"
@@ -569,7 +533,7 @@
               Kavanoza hapsettiğin balığı, kafese hapsettiğin kuşu sevdiğini sanıyorsun değil mi? Aslında onları değil sana ait oluşlarını seviyosun…Gerçek sevgi sahip olmadığına karşı gösterdiklerinde gizlidir <br> <h4>Beni İçinden Sev</h4>
             </p>
           </div>
-          <div class="column">
+          <div class="column1">
             <h3>Orhan Pamuk</h3>
             <img
               class="imgyazar"
@@ -656,56 +620,6 @@
     </footer>
 
    <script>
-/// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
-var menuButton = document.getElementById('menuButton');
-var menuOpen = false;
-
-// Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
-function checkScreenWidth() {
-  var screenWidth = window.innerWidth;
-
-  // 768px altında ise
-  if (screenWidth <= 768) {
-    // Menüyü gizle
-    document.getElementById('yonlendirme').style.display = 'none';
-    document.getElementById('kayitolma').style.display = 'none';
-    // İkona tıklandığında menüyü göster
-    menuButton.style.display = 'block';
-  } else {
-    // 768px üstünde ise
-    // Menüyü göster
-    document.getElementById('yonlendirme').style.display = 'block';
-    document.getElementById('kayitolma').style.display = 'block';
-    // İkona tıklandığında menüyü gösterme
-    menuButton.style.display = 'none';
-  }
-}
-
-// Menüyü kontrol et
-checkScreenWidth();
-
-// Ekran genişliği değiştiğinde kontrol et
-window.addEventListener('resize', function() {
-  checkScreenWidth();
-});
-
-// Menü butonuna tıklanınca
-menuButton.addEventListener('click', function() {
-  // Menüyü aç/kapat
-  if (menuOpen) {
-    // Menü açıksa, kapat
-    document.getElementById('yonlendirme').style.display = 'none';
-    document.getElementById('kayitolma').style.display = 'none';
-  } else {
-    // Menü kapalıysa, aç
-    document.getElementById('yonlendirme').style.display = 'block';
-    document.getElementById('kayitolma').style.display = 'block';
-  }
-
-  // Menü durumunu güncelle
-  menuOpen = !menuOpen;
-});
-
 
 var resim = document.getElementsByClassName("resim");
 var kutucuk = document.getElementsByTagName("li")

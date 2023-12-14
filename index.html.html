@@ -16,72 +16,34 @@
     />
   </head>
   <body>
-    <header class="header">
-      <button id="menuButton">&#9776;</button>
-
-      <table class="table">
-        <tr>
-          <td id="img-logo">
-            <!-- logo ana sayfa -->
-            <a class="img-logo" href="index.html.html">
-              <img
-                class="img-logo1"
-                src="img/alıntıatlası.png"
-                alt="Logo"
-                width="90px"
-                ;
-                height="90px"
-                ;
-            /></a>
-          </td>
-          <td>
-            <h1 class="baslik">Alıntı Atlası</h1>
-          </td>
-          <td>
-            <nav id="yonlendirme">
-              <!-- yonlendirilme yerleri -->
-              <ul class="yonlendirme-ul">
-                <li class="yonlendirme-li">
-                  <a class="kesfet" href="index.html.html #bolum2">Keşfet</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="alintivesoz" href="header/alintilarVeSozler.html"
-                    >Alıntılar ve Sözler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="yazarvesair" href="header/yazarVeSairler.html"
-                    >Yazarlar ve Şairler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="kitapZirvesi" href="header/klasikKitapZirvesi.html"
-                    >Kitap Zirvesi</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </td>
-          <td>
-            <nav id="kayitolma">
-              <!-- kayıt olma kısmı -->
-              <ul class="kayitolma-ul">
-                <li class="kayitolma-li">
-                  <a href="header/kayitOl.html">Kayıt Ol</a>
-                </li>
-                <li class="kayitolma-li">
-                  <a href="header/girisYap.html">Giriş Yap</a>
-                </li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-      </table>
+    <header>
+      <div class=" row">
+        <div class="col col-1">
+       <a href="#">   <img class="logo"src="img/alıntıatlası.png" alt=""></a>
+          <div class=" col col-2">
+            <h1 class="head">Alıntı Atlası</h1>
+          </div>
+        </div>
+        <div class="col col-4">
+          <ul class="kayitol" id="kayitol">
+            <a href="../alıntıatlası/header/kayitOl.html"><li>Kayıt ol</li></a>
+           <a href="../alıntıatlası/header/girisYap.html"> <li>Giriş Yap</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="col col-3">
+          <ul class="item" >
+           <a href="#bolum2"> <li>Keşfet</li></a>
+            <a class="hakkimizda" href="#footer"><li>Hakkımızda</li></a>
+            <a href="../alıntıatlası/header/alintilarVeSozler.html">Alıntılar ve Sözler</a>
+           <a href="../alıntıatlası/header/yazarVeSairler.html"> <li>Yazarlar ve Şairler</li></a>
+           <a href="../alıntıatlası/header/klasikKitapZirvesi.html"> <li>Kitap Zirvesi</li></a>
+          </ul>
+        </div>
+      </div>
     </header>
-   
+ 
     <div class="div-ana">
       <main class="bolum-ana">
         <section class="bolum1" id="bolum1"></section>
@@ -422,57 +384,6 @@
     </footer>
 
     <script>
-/// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
-var menuButton = document.getElementById('menuButton');
-var menuOpen = false;
-
-// Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
-function checkScreenWidth() {
-  var screenWidth = window.innerWidth;
-
-  // 768px altında ise
-  if (screenWidth <= 768) {
-    // Menüyü gizle
-    document.getElementById('yonlendirme').style.display = 'none';
-    document.getElementById('kayitolma').style.display = 'none';
-    // İkona tıklandığında menüyü göster
-    menuButton.style.display = 'block';
-  } else {
-    // 768px üstünde ise
-    // Menüyü göster
-    document.getElementById('yonlendirme').style.display = 'block';
-    document.getElementById('kayitolma').style.display = 'block';
-    // İkona tıklandığında menüyü gösterme
-    menuButton.style.display = 'none';
-  }
-}
-
-// Menüyü kontrol et
-checkScreenWidth();
-
-// Ekran genişliği değiştiğinde kontrol et
-window.addEventListener('resize', function() {
-  checkScreenWidth();
-});
-
-// Menü butonuna tıklanınca
-menuButton.addEventListener('click', function() {
-  // Menüyü aç/kapat
-  if (menuOpen) {
-    // Menü açıksa, kapat
-    document.getElementById('yonlendirme').style.display = 'none';
-    document.getElementById('kayitolma').style.display = 'none';
-  } else {
-    // Menü kapalıysa, aç
-    document.getElementById('yonlendirme').style.display = 'block';
-    document.getElementById('kayitolma').style.display = 'block';
-  }
-
-  // Menü durumunu güncelle
-  menuOpen = !menuOpen;
-});
-
-
 var resim = document.getElementsByClassName("resim");
 var kutucuk = document.getElementsByTagName("li")
 var index = 0;

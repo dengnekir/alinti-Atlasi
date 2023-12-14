@@ -16,6 +16,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <style>
+      html {
+        font-size: 62.5%;
+      }
       #ikon {
         font-size: 1.4rem;
       }
@@ -36,11 +39,12 @@
       /* secenekler kısmı */
       .nav-ana {
         margin: 8rem 0;
-        width: 20rem;
+        width: 24rem;
         height: 100%;
+        max-height: fit-content;
         background-image: linear-gradient(#fff, #9e9797);
         position: fixed;
-        top: 0;
+        top: 7rem;
         left: 0;
         z-index: 1000; /* Diğer içerikleri kapatma olayı */
         overflow-y: auto; /* kaydırma cubugu */
@@ -59,10 +63,12 @@
       }
       /* link arası bosluk */
       .nav-ana ul li {
-        padding: 10px 0;
+        padding: 27px 0;
       }
       body {
         font-size: 62.5%;
+        margin: 0;
+        width: 100%;
       }
       section {
         margin-top: 20vh;
@@ -80,7 +86,7 @@
         font-size: 1.3rem;
         list-style: none;
       }
-      ul {
+      .nav-ana ul {
         margin-top: 3rem;
         list-style: none;
       }
@@ -161,7 +167,7 @@
         .ul-link a {
           font-size: 0.3rem;
         }
-        ul {
+        .nav-ana ul {
           margin-top: 1rem;
         }
         .column {
@@ -205,7 +211,7 @@
         .ul-link a {
           font-size: 0.6rem;
         }
-        ul {
+        .nav-ana ul {
           margin-top: 1rem;
         }
         .column {
@@ -228,69 +234,34 @@
     </style>
   </head>
   <body>
-    <header class="header" id="header">
-      <button id="menuButton">&#9776;</button>
-      <table class="table">
-        <tr>
-          <td id="img-logo">
-            <!-- logo ana sayfa -->
-            <a class="img-logo" href="../index.html.html">
-              <img
-                class="img-logo1"
-                src="../img/alıntıatlası.png"
-                alt="Logo"
-                width="90px"
-                ;
-                height="90px"
-                ;
-            /></a>
-          </td>
-          <td>
-            <h1 class="baslik">Alıntı Atlası</h1>
-          </td>
-          <td>
-            <nav id="yonlendirme">
-              <!-- yonlendirilme yerleri -->
-              <ul class="yonlendirme-ul">
-                <li class="yonlendirme-li">
-                  <a class="kesfet" href="../index.html.html #bolum2">Keşfet</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="hakkimizda" href="#footer">Hakkımızda</a>
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="alintivesoz" href="alintilarVeSozler.html"
-                    >Alıntılar ve Sözler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="yazarvesair" href="yazarVeSairler.html"
-                    >Yazarlar ve Şairler</a
-                  >
-                </li>
-                <li class="yonlendirme-li">
-                  <a class="kitapZirvesi" href="klasikKitapZirvesi.html"
-                    >Kitap Zirvesi</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </td>
-          <td>
-            <nav id="kayitolma">
-              <!-- kayıt olma kısmı -->
-              <ul class="kayitolma-ul">
-                <li class="kayitolma-li">
-                  <a href="kayitOl.html">Kayıt Ol</a>
-                </li>
-                <li class="kayitolma-li">
-                  <a href="girisYap.html">Giriş Yap</a>
-                </li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-      </table>
+    <header>
+      <div class="row">
+        <div class="col col-1">
+          <a href="../index.html.html">
+            <img class="logo" src="../img/alıntıatlası.png" alt=""
+          /></a>
+          <div class="col col-2">
+            <h1 class="head">Alıntı Atlası</h1>
+          </div>
+        </div>
+        <div class="col col-4">
+          <ul class="kayitol" id="kayitol">
+            <a href="kayitOl.html"><li>Kayıt ol</li></a>
+            <a href="girisYap.html"> <li>Giriş Yap</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="col col-3">
+          <ul class="item">
+            <a href="../index.html.html #bolum2"> <li>Keşfet</li></a>
+            <a class="hakkimizda" href="#footer"><li>Hakkımızda</li></a>
+            <a href="alintilarVeSozler.html">Alıntılar ve Sözler</a>
+            <a href="yazarVeSairler.html"> <li>Yazarlar ve Şairler</li></a>
+            <a href="klasikKitapZirvesi.html"> <li>Kitap Zirvesi</li></a>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <section>
@@ -815,57 +786,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      /// Menüyü kontrol etmek için buton ve menü durumunu takip etmek için değişkenler
-      var menuButton = document.getElementById("menuButton");
-      var menuOpen = false;
-
-      // Ekran genişliği değiştiğinde veya sayfa yüklendiğinde kontrol et
-      function checkScreenWidth() {
-        var screenWidth = window.innerWidth;
-
-        // 768px altında ise
-        if (screenWidth <= 768) {
-          // Menüyü gizle
-          document.getElementById("yonlendirme").style.display = "none";
-          document.getElementById("kayitolma").style.display = "none";
-          // İkona tıklandığında menüyü göster
-          menuButton.style.display = "block";
-        } else {
-          // 768px üstünde ise
-          // Menüyü göster
-          document.getElementById("yonlendirme").style.display = "block";
-          document.getElementById("kayitolma").style.display = "block";
-          // İkona tıklandığında menüyü gösterme
-          menuButton.style.display = "none";
-        }
-      }
-
-      // Menüyü kontrol et
-      checkScreenWidth();
-
-      // Ekran genişliği değiştiğinde kontrol et
-      window.addEventListener("resize", function () {
-        checkScreenWidth();
-      });
-
-      // Menü butonuna tıklanınca
-      menuButton.addEventListener("click", function () {
-        // Menüyü aç/kapat
-        if (menuOpen) {
-          // Menü açıksa, kapat
-          document.getElementById("yonlendirme").style.display = "none";
-          document.getElementById("kayitolma").style.display = "none";
-        } else {
-          // Menü kapalıysa, aç
-          document.getElementById("yonlendirme").style.display = "block";
-          document.getElementById("kayitolma").style.display = "block";
-        }
-
-        // Menü durumunu güncelle
-        menuOpen = !menuOpen;
-      });
-    </script>
   </body>
 </html>
