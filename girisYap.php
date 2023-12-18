@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- css -->
-    <link rel="stylesheet" href="../header-footer.css" />
+    <link rel="stylesheet" href="header-footer.css" />
     <!-- document icon -->
     <link
       rel="shortcut icon"
@@ -173,8 +173,8 @@
     <header>
       <div class="row">
         <div class="col col-1">
-          <a href="../index.html.html">
-            <img class="logo" src="../img/alıntıatlası.png" alt=""
+          <a href="index.php">
+            <img class="logo" src="img/alıntıatlası.png" alt=""
           /></a>
           <div class="col col-2">
             <h1 class="head">Alıntı Atlası</h1>
@@ -182,7 +182,7 @@
         </div>
         <div class="col col-4">
           <ul class="kayitol" id="kayitol">
-            <a href="kayitOl.html"><li>Kayıt ol</li></a>
+            <a href="kayitol.php"><li>Kayıt ol</li></a>
             <a href="#"> <li>Giriş Yap</li></a>
           </ul>
         </div>
@@ -190,7 +190,7 @@
       <div class="row-2">
         <div class="col col-3">
           <ul class="item">
-            <a href="../index.html.html #bolum2"> <li>Keşfet</li></a>
+            <a href="index.php #bolum2"> <li>Keşfet</li></a>
             <a class="hakkimizda" href="#footer"><li>Hakkımızda</li></a>
             <a href="alintilarVeSozler.html">Alıntılar ve Sözler</a>
             <a href="yazarVeSairler.html"> <li>Yazarlar ve Şairler</li></a>
@@ -204,18 +204,18 @@
       <div class="h1">
         <h1>Giriş Bilgileri</h1>
       </div>
-      <form action="../index.html.html" class="signin-formu">
+      <form action="girisYap.php" method="post" class="signin-formu">
         <div class="bilgiler">
           <h3>E-posta</h3>
         </div>
         <div class="bilgiler">
-          <input type="email" id="email" />
+          <input type="email" id="email" required name="email" />
         </div>
         <div class="bilgiler">
           <h3>Şifreniz</h3>
         </div>
         <div class="bilgiler">
-          <input type="password" id="password" />
+          <input type="password" id="password" required name="password" />
         </div>
         <div class="bilgiler" id="checkbox">
           <input type="checkbox" id="benihatırla" />
@@ -224,7 +224,7 @@
         <div class="bilgiler">
           <button type="submit">Giriş Yap</button>
           <label for="sifremiunuttum"
-            ><a href="../index.html.html" id="a-sifreunutma"
+            ><a href="../index.php" id="a-sifreunutma"
               >Şifremi unuttum</a
             ></label
           >
@@ -255,10 +255,10 @@
           <ul id="logo2-ul">
             <li id="logo2">
               <!-- logo footer sayfa -->
-              <a class="img-logo" href="../index.html.html">
+              <a class="img-logo" href="index.php">
                 <img
                   class="img-logo2"
-                  src="../img/fuuter.png"
+                  src="img/fuuter.png"
                   alt="Logo"
                   width="150"
                   height="150"
@@ -320,3 +320,23 @@
     </footer>
   </body>
 </html>
+<?php
+include("alintiatlasi_kayit.php");
+
+if(isset($_POST["email"], $_POST["password"])){
+    $kullaniciMail = $_POST["email"];
+    $sifre = $_POST["password"];
+
+    // Kullanıcıyı veritabanında kontrol et
+    $sorgu = "SELECT * FROM kayitoll WHERE email='$kullaniciMail' AND sifre='$sifre'";
+    $sonuc = $baglan->query($sorgu);
+
+    if($sonuc->num_rows > 0){
+        // Giriş başarılı
+        echo "<script>alert('Giriş başarılı')</script>";
+    } else {
+        // Kullanıcı bulunamadı veya şifre hatalı
+        echo "<script>alert('Giriş başarısız. Kullanıcı adı veya şifre hatalı')</script>";
+    }
+}
+?>

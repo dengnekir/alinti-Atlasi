@@ -7,11 +7,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <!-- css -->
-    <link rel="stylesheet" href="../header-footer.css" />
+    <link rel="stylesheet" href="header-footer.css" />
     <!-- document icon -->
     <link
       rel="shortcut icon"
-      href="../img/alıntıatlası.png"
+      href="img/alıntıatlası.png"
       type="image/x-icon"
     />
     <link rel="shortcut icon" href="img/alıntıatlası.png" type="image/x-icon" />
@@ -172,8 +172,8 @@
     <header>
       <div class="row">
         <div class="col col-1">
-          <a href="../index.html.html">
-            <img class="logo" src="../img/alıntıatlası.png" alt=""
+        <a href="index.php">
+            <img class="logo" src="img/alıntıatlası.png" alt=""
           /></a>
           <div class="col col-2">
             <h1 class="head">Alıntı Atlası</h1>
@@ -182,14 +182,14 @@
         <div class="col col-4">
           <ul class="kayitol" id="kayitol">
             <a href="#"><li>Kayıt ol</li></a>
-            <a href="girisYap.html"> <li>Giriş Yap</li></a>
+            <a href="girisYap.php"> <li>Giriş Yap</li></a>
           </ul>
         </div>
       </div>
       <div class="row-2">
         <div class="col col-3">
           <ul class="item">
-            <a href="../index.html.html #bolum2"> <li>Keşfet</li></a>
+            <a href="../index.php #bolum2"> <li>Keşfet</li></a>
             <a class="hakkimizda" href="#footer"><li>Hakkımızda</li></a>
             <a href="alintilarVeSozler.html">Alıntılar ve Sözler</a>
             <a href="yazarVeSairler.html"> <li>Yazarlar ve Şairler</li></a>
@@ -204,44 +204,44 @@
         <div class="giris-h1">
           <h1>Kayıt OL</h1>
         </div>
-        <form action="https://formspree.io/f/{form_id}" method="post">
+        <form action="kayitOl.php" method="post">
           <div class="ana-form">
             <div class="genel">
               <div class="bilgiler">
                 <h3>İsminiz ve Soyisminiz</h3>
               </div>
               <div class="bilgiler">
-                <input type="text" id="name" />
+                <input type="text" id="name" required name="name" />
               </div>
               <div class="bilgiler">
                 <h3>Kullanıcı Adınız</h3>
               </div>
               <div class="bilgiler">
-                <input type="text" id="nickname" />
+                <input type="text" id="nickname" required name="nickname" />
               </div>
               <div class="bilgiler">
                 <h3>E-mail</h3>
               </div>
               <div class="bilgiler">
-                <input type="email" id="email" />
+                <input type="email" id="email" required name="email" />
               </div>
               <div class="bilgiler">
                 <h3>Telefon Numaranız</h3>
               </div>
               <div class="bilgiler">
-                <input type="tel" id="number" />
+                <input type="tel" id="number" required name="number" />
               </div>
               <div class="bilgiler">
                 <h3>Şifreniz</h3>
               </div>
               <div class="bilgiler">
-                <input type="password" id="password" />
+                <input type="password" id="password" required name="password" />
               </div>
               <div class="bilgiler">
                 <h3>Doğum Tarihiniz</h3>
               </div>
               <div class="bilgiler">
-                <input type="date" id="date" />
+                <input type="date" id="date" required name="date" />
               </div>
             </div>
             <div class="bilgiler">
@@ -265,7 +265,7 @@
             >
           </button>
           <button class="giris b2">
-            <a href="../index.html.html" id="a"> <h4>Meta İle Kayıt Ol</h4></a>
+            <a href="../index.php" id="a"> <h4>Meta İle Kayıt Ol</h4></a>
           </button>
         </div>
       </div>
@@ -277,10 +277,10 @@
           <ul id="logo2-ul">
             <li id="logo2">
               <!-- logo footer sayfa -->
-              <a class="img-logo" href="../index.html.html">
+              <a class="img-logo" href="index.php">
                 <img
                   class="img-logo2"
-                  src="../img/fuuter.png"
+                  src="img/fuuter.png"
                   alt="Logo"
                   width="150"
                   height="150"
@@ -342,3 +342,22 @@
     </footer>
   </body>
 </html>
+<?php
+include("alintiatlasi_kayit.php");
+
+if(isset($_POST["name"], $_POST["nickname"], $_POST["email"], $_POST["number"], $_POST["password"], $_POST["date"])){
+  $adSoyad = $_POST["name"];
+  $kullaniciAdi = $_POST["nickname"];
+  $kullaniciMail = $_POST["email"];
+  $telefon = $_POST["number"];
+  $sifre = $_POST["password"];
+  $dogumTarihi = $_POST["date"];
+  $eklem="";
+  $eklem = "INSERT INTO kayitoll(adsoyad, kullaniciAdi, email, telefon, sifre, dogumTarihi) VALUES ('".$adSoyad."', '".$kullaniciAdi."', '".$kullaniciMail."', '".$telefon."', '".$sifre."', '".$dogumTarihi."')";
+
+  if($baglan->query($eklem) === TRUE){
+    echo "<script>alert('Kayıt başarıyla oluşturuldu.')</script>";
+
+  } 
+}
+?>

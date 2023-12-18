@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+ 
     <header>
       <div class=" row">
         <div class="col col-1">
@@ -26,8 +27,8 @@
         </div>
         <div class="col col-4">
           <ul class="kayitol" id="kayitol">
-            <a href="../alıntıatlası/header/kayitOl.html"><li>Kayıt ol</li></a>
-           <a href="../alıntıatlası/header/girisYap.html"> <li>Giriş Yap</li></a>
+            <a href="kayitOl.php"><li>Kayıt ol</li></a>
+           <a href="girisYap.php"> <li>Giriş Yap</li></a>
           </ul>
         </div>
       </div>
@@ -45,6 +46,7 @@
     </header>
  
     <div class="div-ana">
+
       <main class="bolum-ana">
         <section class="bolum1" id="bolum1"></section>
         <section class="bolum2" id="bolum2">
@@ -317,7 +319,8 @@
       </main>
       </div>
       
-    <footer id="footer">
+   
+      <footer id="footer">
       <div class="footer-genel">
         <div class="footer">
           <ul id="logo2-ul">
@@ -382,43 +385,43 @@
         </div>
       </div>
     </footer>
-
     <script>
-var resim = document.getElementsByClassName("resim");
-var kutucuk = document.getElementsByTagName("li")
-var index = 0;
-galeri();
-basla();
-function galeri() {
-    if (index >= resim.length) {
-        index = 0;
-    }
-    else if (index < 0) {
-        index = resim.length - 1;
-    }
-    for (i = 0; i < resim.length; i++) {
-        resim[i].classList.remove("aktif2");//ilgili nesneden bir tane silmek için kullanılır
-        kutucuk[i].classList.remove("aktiflist");
-    }
-    resim[index].classList.add("aktif2");//aktif olan indisi ekranda göstermek için kullanılır
-    kutucuk[index].classList.add("aktiflist");
-}
+      var resim = document.getElementsByClassName("resim");
+      var kutucuk = document.getElementsByTagName("li")
+      var index = 0;
+      galeri();
+      basla();
+      function galeri() {
+          if (index >= resim.length) {
+              index = 0;
+          }
+          else if (index < 0) {
+              index = resim.length - 1;
+          }
+          for (i = 0; i < resim.length; i++) {
+              resim[i].classList.remove("aktif2");//ilgili nesneden bir tane silmek için kullanılır
+              kutucuk[i].classList.remove("aktiflist");
+          }
+          resim[index].classList.add("aktif2");//aktif olan indisi ekranda göstermek için kullanılır
+          kutucuk[index].classList.add("aktiflist");
+      }
 
-function ileri(){
-    
-    index++;
-    galeri();
-}
-function geri(){
-    index--;
-    galeri();
-}
-function dur(){
-    clearInterval(sure);
-}
-function basla() {
-    sure = setInterval(ileri, 4000);
-}
+      function ileri(){
+          
+          index++;
+          galeri();
+      }
+      function geri(){
+          index--;
+          galeri();
+      }
+      function dur(){
+          clearInterval(sure);
+      }
+      function basla() {
+          sure = setInterval(ileri, 4000);
+      } 
     </script>
   </body>
 </html>
+
