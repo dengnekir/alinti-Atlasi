@@ -172,7 +172,7 @@
     <header>
       <div class="row">
         <div class="col col-1">
-        <a href="index.php">
+        <a href="index.html">
             <img class="logo" src="img/alıntıatlası.png" alt=""
           /></a>
           <div class="col col-2">
@@ -191,9 +191,9 @@
           <ul class="item">
             <a href="../index.php #bolum2"> <li>Keşfet</li></a>
             <a class="hakkimizda" href="#footer"><li>Hakkımızda</li></a>
-            <a href="alintilarVeSozler.html">Alıntılar ve Sözler</a>
-            <a href="yazarVeSairler.html"> <li>Yazarlar ve Şairler</li></a>
-            <a href="klasikKitapZirvesi.html"> <li>Kitap Zirvesi</li></a>
+            <a href="header/alintilarVeSozler.html">Alıntılar ve Sözler</a>
+            <a href="header/yazarVeSairler.html"> <li>Yazarlar ve Şairler</li></a>
+            <a href="header/klasikKitapZirvesi.html"> <li>Kitap Zirvesi</li></a>
           </ul>
         </div>
       </div>
@@ -277,7 +277,7 @@
           <ul id="logo2-ul">
             <li id="logo2">
               <!-- logo footer sayfa -->
-              <a class="img-logo" href="index.php">
+              <a class="img-logo" href="index.html">
                 <img
                   class="img-logo2"
                   src="img/fuuter.png"
