@@ -77,6 +77,10 @@
                 <td>".$cek['telefon']."</td>
                 <td>".$cek['sifre']."</td>
                 <td>".$cek['dogumTarihi']."</td>
+                <td>
+                <a href='veri-guncelle.php?id=" . $cek['id'] . "'>Güncelle</a>
+                <a href='veritabani.php?sil=" . $cek['id'] . "' onclick='return confirm(\"Bu kaydı silmek istediğinizden emin misiniz?\")'>Sil</a>
+            </td>
               </tr>
            ";
         }
@@ -86,7 +90,16 @@
         }
         
       }
-
+      if (isset($_GET['sil'])) {
+        $silId = $_GET['sil'];
+        $silQuery = "DELETE FROM kayitoll WHERE id = $silId";
+        if ($baglan->query($silQuery)) {
+            echo "<script>alert('Kullanıcı başarıyla silindi.');</script>";
+            echo "<script>window.location.href='veritabani.php'</script>";
+        } else {
+            echo "<script>alert('Silme işlemi başarısız.');</script>";
+        }
+    }
 ?>
       
     </table>
